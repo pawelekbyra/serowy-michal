@@ -1,70 +1,48 @@
 # STAN — wznów tutaj
 
-Ten plik czyta każda sesja NA POCZĄTKU i aktualizuje NA KOŃCU. Ma zawsze
-odpowiadać na jedno pytanie: **co jest następną najlepszą akcją?**
+Czytam na początku sesji, aktualizuję na końcu. Ma odpowiadać na jedno pytanie:
+**jaka jest jedna następna najlepsza akcja?**
 
-Ostatnia aktualizacja: 2026-07-12, Dzień 1.
-Sesja poprzednia zakończyła się: 2026-07-12 (~18:00)
+Ostatnia aktualizacja: 2026-07-12 (Dzień 1, przebudowa + budowa MVP HEJKARTA).
 
-## Faza firmy
-**ETAP 1 — Budowanie systemu fundamenetu (Faza 0).** 
-Celnie: Mózg firmy i procesy działają. Potem będzie walidacja biznesu.
-Czasochłonność: ~10-15% sesji na architekturę, reszta — przyszłe biznesu.
-Deadline fazy: 2026-07-19 (gdy PROCES-SESJI i CHECKLIST będą działać).
+## Etap
+**E1 — Kanał (w toku).** Właściciel wyznaczył pierwszy produkt (HEJKARTA), który
+jest jednocześnie publicznym debiutem Serowego Michała. E0 (mózg) domknięte.
+Etapy są bramkowane dowodem, nie datą — patrz `firma/AZYMUT.md`.
 
-## CZYTAJ NA STARCIE TEJ SESJI (5 min)
-1. ✅ `firma/STAN.md` (sekcja "Następna akcja") — co się robi dzisiaj?
-2. ✅ `eksperymenty/WNIOSKI.md` (ostatnie 3 wpisy) — co już wiem?
-3. ✅ `firma/MOZLIWOSCI.md` (nowy!) — co mogę robić DZIŚ bez czekania?
-4. Jeśli mam aktywny eksperyment: `eksperymenty/aktywne/E-xxxx.md` — gdzie przerwałem?
+## Tablica Trzech Zasobów (jedyny majątek, który się liczy)
+- **REPUTACJA:** wciąż 0 publicznego zasięgu, ale mamy gotowy pierwszy publiczny
+  aktyw — sklep HEJKARTA. Zasięg ruszy po deployu i akceptacji treści.
+- **ZDOLNOŚĆ:** ⬆️ wielokrotny stack e‑commerce (Next.js + Stripe + Vercel),
+  sprawdzony lokalnie build. Szablon dla każdego kolejnego produktu. + mózg repo.
+- **WIEDZA:** research 2026 + 8 lekcji w WNIOSKI.md.
 
 ## Co żyje (realne aktywa)
-- ✅ Repo z architekturą pamięci (CLAUDE.md, firma/, system/, decyzje/, eksperymenty/, wiedza/).
-- ✅ Podpięte narzędzia: GitHub, Vercel, Stripe (live), Cloudflare, Gmail.
-- ✅ Research rynku 2026 (`wiedza/rynek-2026-07.md`).
-- ✅ Azymut ustawiony (`firma/AZYMUT.md`).
-- ✅ Nowy: `system/PROCES-SESJI.md` (instrukcje dla AI jak działać) — W-BUDOWIE
-- ✅ Nowy: `system/CHECKLIST-STARTU.md` — W-BUDOWIE
-- ✅ Nowy: `firma/MOZLIWOSCI.md` — W-BUDOWIE
-- ✅ Nowy: `biznes/PORTFEL.md` — W-BUDOWIE
-- Folder `pomysly/`: 001 (content — archiwum), 002 (dunning — kandydat)
-- Folder `biznes/` (nowy) — aktywne biznesu (będzie przenieść 002-dunning tu po E-0001)
-- Brak produktu. Brak klientów. Brak przychodu (OCZEKIWANE — Faza 0).
+- ✅ MVP sklepu **HEJKARTA** — `biznes/001-hujkarta/` (Next.js 14 + Stripe).
+  Build przechodzi, zweryfikowany lokalnie (desktop + mobile).
+- ✅ Przebudowany mózg: `SEROWY-MICHAL.md`, `SLABOSCI.md`, `AZYMUT.md`, `PETLA.md`.
+- ✅ Podpięte narzędzia (GitHub, Vercel, Stripe, Cloudflare, Gmail).
+- Brak przychodu i zasięgu (OCZEKIWANE — czekamy na deploy + zgodę).
 
-## Metryki
-- MRR: 0 zł (oczekiwane w Fazie 0 — to faza budowy systemu)
-- Klienci: 0
-- Wydatki pieniężne: 0 zł
-
-## Otwarte decyzje czekające na właściciela
-- Zakup domeny — **wstrzymany** do czasu gdy biznes przejdzie E-0001 i będziemy w fazie MVP.
+## Blokady przed sprzedażą HUJKARTY (wymagają właściciela)
+1. **Dane sprzedawcy** do stron prawnych (nazwa, adres, NIP, e‑mail, adres
+   zwrotów) — bez tego nie wolno pobierać płatności (twarda granica).
+2. **Vercel** — podłączenie repo (Root Directory `biznes/001-hujkarta`) + domena
+   `www.serowymichal.pl`.
+3. **`STRIPE_SECRET_KEY`** w env Vercel (gdy ruszamy sprzedaż).
+4. **Realizacja fizyczna** kart (druk + wysyłka) — do ustalenia.
+5. **Akceptacja** treści publicznej (wulgarna nazwa) i uruchomienia płatności.
 
 ## Następna najlepsza akcja
+**Oddać właścicielowi 5 blokad powyżej i po jego decyzji dokończyć launch.**
+- Bramka dźwigni: HEJKARTA powiększa **Zdolność** (szablon e‑commerce) i
+  uruchamia **Reputację** (pierwszy publiczny aktyw). Przechodzi.
+- Po deployu: test Checkoutu w trybie testowym Stripe, potem ewentualny webhook
+  (potwierdzenie zamówienia → e‑mail).
+- Dunning (E-0001) pozostaje **wstrzymany** do E2.
 
-### Jeśli to sesja robocza firmy (post-2026-07-12)
-**Załaduj SYSTEM-SESJI (Etap 1 — fundament)**
-- TODO 1: Stwórz `system/PROCES-SESJI.md` (reguły dla AI)
-- TODO 2: Stwórz `system/CHECKLIST-STARTU.md` (co czytać przed pracą)
-- TODO 3: Stwórz `firma/FAZY.md` (opisy faz 0-4)
-- TODO 4: Stwórz `firma/MOZLIWOSCI.md` (co AI potrafi robić TERAZ)
-- TODO 5: Stwórz `biznes/PORTFEL.md` (tabela biznesów)
-- TODO 6: Stwórz `eksperymenty/aktywne/E-0001-dunning-walidacja.md` (live log)
-- TODO 7: Zaktualizuj `eksperymenty/REJESTR-EKSPERYMENTOW.md` (dodaj pola: Faza, Deadline, Alternatywy)
-
-Deadline TODO 1-7: **2026-07-19** (koniec Etapu 1).
-
-**Jeśli poniżej jest już zrobione**, przejdź do:
-### Eksperyment E-0001: walidacja kierunku wiodącego (nudne narzędzie + dunning)
-Deadline: 2026-07-19
-Gdzie żyć: `eksperymenty/aktywne/E-0001-dunning-walidacja.md`
-Metryka i kryterium: patrz `eksperymenty/REJESTR-EKSPERYMENTOW.md`
-
-Jeśli POTWIERDZONA: przechodzisz do Fazy 2 (MVP).
-Jeśli OBALONA: przechodzisz do E-0002 (alternatywa w REJESTRZE).
-
-## ZAKTUALIZUJ NA KONIEC SESJI
-- [ ] `firma/STAN.md` — sekcja "Następna akcja" (konkretnie co, kiedy, gdzie)
-- [ ] `DZIENNIK.md` — nowy wpis (co się stało, logika, następny krok)
-- [ ] Jeśli eksperyment: `eksperymenty/REJESTR-EKSPERYMENTOW.md` (status)
-- [ ] Jeśli biznes: `biznes/PORTFEL.md` (MRR, deadline)
-- [ ] Jeśli nowy wniosek: `eksperymenty/WNIOSKI.md` (ZARAZ, nie na koniec!)
+## Zaktualizuj na koniec sesji
+- [ ] `firma/STAN.md` — etap, tablica Zasobów, jedna następna akcja.
+- [ ] `DZIENNIK.md` — wpis (co ZBUDOWANO, rozumowanie, następny krok).
+- [ ] Warunkowo: WNIOSKI / REJESTR-DECYZJI / REJESTR-EKSPERYMENTOW / pomysly.
+- [ ] Test sesji: czy powiększyła ≥1 z Trzech Zasobów?

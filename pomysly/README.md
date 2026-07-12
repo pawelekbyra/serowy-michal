@@ -26,7 +26,8 @@ pomysłów", dopisuję je tutaj — każdy jako osobny podkatalog.
 | Nr | Pomysł | Status | Eksperyment |
 |----|--------|--------|-------------|
 | 001 | Usługi contentowe / SEO (subskrypcja treści) | ODRZUCONY | — |
-| 002 | Odzysk nieudanych płatności / dunning | DO-WALIDACJI | E-0001 |
+| 002 | Odzysk nieudanych płatności / dunning | DO-WALIDACJI (wstrzymany do E2) | E-0001 |
+| 003 | HEJKARTA — bezużyteczna karta kolekcjonerska | AKTYWNY (decyzja właściciela, `biznes/001-hujkarta/`) | — |
 
 ## Szablon nowego pomysłu (`NNN-slug/README.md`)
 ```

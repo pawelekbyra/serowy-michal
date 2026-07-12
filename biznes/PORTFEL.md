@@ -1,112 +1,39 @@
 # Portfel biznesów
 
-Żywy przegląd aktywnych i walidowanych produktów. Zaktualizuj po każdej sesji.
+Żywy przegląd biznesów. Aktualizuj, gdy coś się zmienia. Dopóki nie ma biznesu w
+budowie, ten plik jest prawie pusty — i dobrze (nie udajemy portfela, którego
+nie ma; S-4). Etapy i filtr: `firma/AZYMUT.md`. Produkt zerowy (Serowy Michał)
+nie jest tu — jest w `firma/SEROWY-MICHAL.md`.
 
----
+## Aktywne / w walidacji
+| ID | Biznes | Status | Etap | MRR | Następny krok |
+|----|--------|--------|------|-----|---------------|
+| 001 | HEJKARTA (sklep serowymichal.pl) | MVP GOTOWY (kod) | E1 (Kanał) | 0 zł | Deploy na Vercel + dane sprzedawcy + zgoda właściciela |
 
-## Status biznesów
+**001 — HEJKARTA:** pierwszy realny produkt i jednocześnie publiczny debiut
+Serowego Michała (E1). Bezużyteczna karta kolekcjonerska za 12 zł. Sklep w
+Next.js + Stripe zbudowany i zweryfikowany lokalnie (`biznes/001-hujkarta/`).
+Decyzja właściciela D-0009. Blokady przed sprzedażą: dane sprzedawcy w regulaminie,
+klucz Stripe, realizacja fizyczna, akceptacja treści publicznej.
 
-| ID | Biznes | Status | Faza | MRR | Klienci | Deadline | Eksperyment | Link |
-|----|----|--------|------|-----|---------|----------|-------------|------|
-| 001 | Odzysk nieudanych płatności (Dunning) | WALIDACJA | 1 | $0 | 0 | 2026-07-19 | E-0001 | `biznes/001-dunning/` |
+Kandydat czekający na E2: **dunning / odzysk płatności** (`pomysly/002-...`,
+eksperyment E-0001 — WSTRZYMANY do czasu, aż będzie kanał).
 
----
+## Statusy (skrót)
+ZAPLANOWANY → W‑WALIDACJI → MVP → LAUNCH → SKALOWANIE, oraz ZAWIESZONY / ZABITY.
+Definicje etapów i bramek: `firma/AZYMUT.md`.
 
-## Stany biznesów
+## Archiwum (lekcje, nie kasujemy)
+| ID | Biznes | Status | Powód |
+|----|--------|--------|-------|
+| content | AJAJAJ Content (SEO) | ZABITY | Skomodytyzowany, brak moatu, niskie marże (L-004) |
 
-### ✏️ ZAPLANOWANY
-Pomysł przeszedł filtr AZYMUT, czeka na eksperyment walidacyjny.
+## Jak dodać biznes
+Gdy pomysł przejdzie filtr AZYMUT i sygnał z kanału (E2): utwórz `biznes/NNN-slug/`
+(`README.md` spec, `NOTATKI.md` live log), dodaj wiersz wyżej, podlinkuj eksperyment.
 
-### 🔍 WALIDACJA (ETAP 1)
-Trwa eksperyment — badamy czy rynek istnieje, czy ktoś zapłaci, czy kanał jest osiągalny.
-- **Deadline:** konkretna data (patrz REJESTR-EKSPERYMENTOW.md)
-- **Co się liczy:** rozmowy z prospect'ami, feedback, liczby z researchu
+## Cel portfela
+10-15% biznesów robi 70-80% przychodu — wiele tanich prób, jeden wspólny kanał
+(Serowy Michał). Nie all‑in na jeden zakład.
 
-### 🛠️ MVP (ETAP 2)
-Rynek potwierdził popyt. Budujemy minimalny działający produkt.
-- **Deadline:** data deployment'u do production
-- **Co się liczy:** landing page live, Stripe działa, ≥1 beta-klient testuje
-
-### 🚀 LAUNCH (ETAP 3)
-MVP gotowy. Wdrażamy i pozyskujemy pierwszych płacących klientów.
-- **Deadline:** data zakupu domeny i pierwszej kampanii
-- **Co się liczy:** pierwszy płacący klient, feedback klientów
-
-### 📈 SKALOWANIE (ETAP 4)
-Klienci płacą, MRR rośnie. Optymalizujemy retention i akwizycję.
-- **Metryka:** MRR, churn, CAC, LTV
-- **Co się liczy:** rosnący MRR, utrzymanie churn'u poniżej 20%/mies.
-
-### ⏸️ ZAWIESZONY
-Na hold — może wrócić, ale teraz nie pracujemy.
-
-### ☠️ ZMORDOWANY / ARCHIWUM
-Rynek obaliło hipotezę. Uczenie się + archiwum.
-- **Link:** `biznes/archiwum/`
-
----
-
-## MRR (Monthly Recurring Revenue)
-
-- **Liczba:** ile faktycznie wpływa co miesiąc (w zł)
-- **Update:** raz na 2 tygodnie LUB na koniec sesji (jeśli były zmiany)
-- **Format:** $XXX (jeśli brak przychodu: $0)
-
----
-
-## Klienci
-
-- **Liczba:** ile aktywnych, płacących abonentów
-- **Update:** każda sesja (zaraz gdy nowy klient lub churn)
-
----
-
-## Deadline
-
-- **Format:** YYYY-MM-DD (konkretna data, nie „niedługo")
-- **Znaczenie:** deadline aktualnej fazy (np. jeśli WALIDACJA — deadline eksperymentu)
-
----
-
-## Eksperyment
-
-- **Link:** do rejestracyjnego eksperymentu (E-0001, E-0002, itd.)
-- **Znaczenie:** który eksperyment waliduje ten biznes
-
----
-
-## Archiwum
-
-Biznesu, które nie proszły walidacji lub były wycofane.
-
-| ID | Biznes | Status | Powód | Link |
-|----|----|--------|-------|------|
-| 001-content | AJAJAJ Content (content SEO) | ZMORDOWANY | Rynek skomodytyzowany, brak moatu, niskie marże | `biznes/archiwum/001-content/` |
-
----
-
-## Portfel jako całość
-
-**Cele dla portfela:**
-- Faza 1 (Walidacja): ≥1 biznes POTWIERDZONA (E-0001 OK)
-- Faza 2-3 (MVP + Launch): 1 biznes w LAUNCH, przygotowanie E-0002
-- Faza 4 (Skalowanie): 2-3 biznesu równolegle (jeden SKALOWANIE, jeden MVP, jeden WALIDACJA)
-- **Długoterminowo:** 10-15% biznesów robi 70-80% przychodu (portfel z dużymi outliers'ami)
-
----
-
-## Jak dodać nowy biznes
-
-1. Stwórz folder: `biznes/NNN-slug/`
-2. Dodaj pliki:
-   - `README.md` (spec produktu)
-   - `ROADMAP.md` (fazy)
-   - `METRYKI.md` (co mierzymy)
-   - `NOTATKI.md` (live log)
-3. Dodaj wiersz do tabeli powyżej (Status: ZAPLANOWANY)
-4. Link eksperyment w REJESTR-EKSPERYMENTOW.md
-
----
-
-## Ostatnia aktualizacja
-2026-07-12 (początek)
+Ostatnia aktualizacja: 2026-07-12 (przebudowa).

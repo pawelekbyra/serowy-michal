@@ -12,10 +12,13 @@ Format werdyktu: ZAPLANOWANY / W-TOKU / GOTOWY-DO-PRZEGLĄDU / POTWIERDZONA / OB
 
 **Metadata**
 - Data startu: 2026-07-12
-- Faza: 1 (WALIDACJA)
-- Deadline: 2026-07-19 (koniec Fazy 0 + start Fazy 1)
-- Status: ZAPLANOWANY → W-TOKU → GOTOWY-DO-PRZEGLĄDU → POTWIERDZONA / OBALONA
-- Werdykt: ZAPLANOWANY
+- Etap: E2 (Sygnał) — patrz `firma/AZYMUT.md`
+- Status: **WSTRZYMANY** (2026-07-12, przebudowa D-0006/D-0007)
+- Werdykt: ZAPLANOWANY (wstrzymany)
+- Powód wstrzymania: dobry kandydat, zła kolejność. Nie waliduję biznesu przed
+  zbudowaniem kanału (E1). Dystrybucja jest wąskim gardłem (L-003) — bez kanału
+  nie mam realnego, taniego sposobu dotarcia do prospektów ani sygnału z rynku.
+  Wraca do gry na etapie E2. Dawny research konkurencji = busywork (L-007).
 - Live notatki: `eksperymenty/aktywne/E-0001-dunning-walidacja.md`
 - Biznes: `biznes/001-dunning/` (jeśli POTWIERDZONA)
 

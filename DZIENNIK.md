@@ -200,3 +200,92 @@ nie celu.
 System pamięci jest teraz **silniejszy** od konkretnego biznesu. To jest właściwa kolejność.
 
 *— Serowy Michał*
+
+---
+
+## Dzień 1 — przebudowa architektury (ta sama data, później)
+
+### Punkt wyjścia
+Poprzednia sesja zostawiła STAN wskazujący jako następny krok „research
+konkurencji dla E-0001 (dunning)". Właściciel to zatrzymał: to był głupi krok,
+bo repo nie było zorientowane na sukces ani nie modelowało moich słabości.
+Zadanie: przemyśleć od nowa i zbudować kompletną architekturę Serowego Michała.
+
+### Co zbudowano (nie „co robiłem")
+Przebudowa mózgu firmy z orientacji na proces na orientację na wynik:
+- **`firma/SEROWY-MICHAL.md`** (nowy) — reframe: produktem jest Serowy Michał
+  (operator + kanał + treść), nie pojedynczy biznes. Trzy Zasoby (Reputacja,
+  Zdolność, Wiedza) i Bramka dźwigni jako filtr przed każdą akcją.
+- **`firma/SLABOSCI.md`** (nowy) — 8 błędów systematycznych zimnej sesji, każdy z
+  twardym zabezpieczeniem. To była dziura wskazana przez właściciela: nie
+  wiedziałem, że jestem głupi w konkretny sposób.
+- **`system/PETLA.md`** (nowy) — jedna, chuda pętla sesji z obowiązkową Bramką
+  dźwigni. Zastępuje PROCES-SESJI + CHECKLIST.
+- Przepisane **KONSTYTUCJA / AZYMUT / STAN / CLAUDE / README** wokół nowej osi.
+- **Usunięte** jako biurokracja: PROCES-SESJI, CHECKLIST-STARTU, FAZY,
+  MOZLIWOSCI (powielały treść i optymalizowały notatki, nie wynik).
+- AZYMUT: etapy przestawione z kalendarza na bramki dowodowe; kolejność zmieniona
+  na „kanał przed walidacją biznesu". E-0001 (dunning) WSTRZYMANY do etapu E2.
+
+### Rozumowanie
+Mój własny research mówił (L-002/L-003): produkcja jest darmowa, moatem jest
+dystrybucja. Stara architektura tego nie słuchała — kazała najpierw walidować
+nudny biznes, czyli startować od najsłabszego ogniwa. Serowy Michał jako
+publiczny byt jest kanałem, którego brakuje każdemu pojedynczemu biznesowi — to
+jest „potęga 3": jeden zbudowany kanał mnoży każdy kolejny produkt w portfelu.
+Nowe wnioski: L-006 (produkt = Serowy Michał), L-007 (sesja bez Trzech Zasobów =
+zmarnowana), L-008 (biurokracja to busywork w przebraniu). Decyzje D-0006/07/08.
+
+### Test sesji
+Powiększyła **Zdolność** (spójny, wymuszający właściwe zachowanie mózg) i
+przygotowała **Reputację** (etap E1). Przechodzi.
+
+### Następny krok
+Decyzja właściciela: go/no‑go na uczynienie Serowego Michała bytem publicznym
+(E1) — to twarda granica, więc czeka na Pawła. Po akceptacji: zaprojektować
+najtańszy pierwszy publiczny aktyw. Żadnej walidacji biznesu przed kanałem.
+
+*— Serowy Michał*
+
+---
+
+## Dzień 1 — pierwszy biznes: HEJKARTA (ta sama data, wieczór)
+
+### Punkt wyjścia
+Właściciel podjął decyzję o E1 i od razu wyznaczył pierwszy produkt: HEJKARTA —
+bezużyteczna plastikowa karta kolekcjonerska za 12 zł, sprzedawana na
+www.serowymichal.pl (Next.js na Vercel, Stripe). Zadanie: zbudować stronę „na
+maksa" w tej sesji, do granicy tego, na co mogę sobie pozwolić bez
+nieodwracalnych kroków. To domyka pytanie z poprzedniego wpisu — właściciel dał
+go na publiczny debiut.
+
+### Co zbudowano
+Kompletny sklep w `biznes/001-hujkarta/` (Next.js 14 + TypeScript + Stripe):
+- Strona główna: hero z renderowaną w CSS złotą kartą, „specyfikacja techniczna"
+  (0 funkcji, 100% plastiku), opinie, FAQ, CTA. Estetyka: dark + serowo‑złoto,
+  konwencja „luksusowa powaga wobec bezużytecznego przedmiotu".
+- `/kup`: wybór ilości + Stripe Checkout (`app/api/checkout`, runtime Node).
+- Strony prawne: regulamin, zwroty (14 dni), prywatność (RODO), kontakt —
+  z oznaczonymi `[PLACEHOLDER]` na dane sprzedawcy.
+- SEO: metadata, Open Graph, robots, sitemap, favicon SVG.
+- Zweryfikowano: `next build` przechodzi (14 tras), serwer prod 200, zrzuty
+  desktop + mobile potwierdzają jakość. Poprawiono responsywność karty.
+
+### Rozumowanie i granice
+Trzymam twarde granice: endpoint płatności bez `STRIPE_SECRET_KEY` zwraca „tryb
+podglądu" (503) — sprzedaż nie ruszy przypadkiem. Strony prawne mają placeholdery
+zamiast zmyślonych danych sprzedawcy (nie fałszuję tożsamości; bez realnych
+danych nie wolno pobierać płatności — KONSTYTUCJA §8). Next podbity do 14.2.35
+(luka w 14.2.15). Do launchu potrzeba 5 rzeczy od właściciela — spisane w STAN
+i README biznesu.
+
+### Test sesji
+Powiększa **Zdolność** (wielokrotny szablon e‑commerce) i tworzy pierwszy aktyw
+**Reputacji** (publiczny sklep = kanał). Przechodzi Bramkę dźwigni.
+
+### Następny krok
+Właściciel: dane sprzedawcy + Vercel (Root Directory `biznes/001-hujkarta`, domena)
++ `STRIPE_SECRET_KEY` + realizacja fizyczna kart + akceptacja treści. Po deployu:
+test Checkoutu (tryb testowy Stripe), potem webhook potwierdzeń.
+
+*— Serowy Michał*
