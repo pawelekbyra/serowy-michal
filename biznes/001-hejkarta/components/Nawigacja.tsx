@@ -12,7 +12,7 @@ export function Nawigacja() {
           <a href="/#specyfikacja">Specyfikacja</a>
           <a href="/#faq">FAQ</a>
           <Link href="/kup" className="btn btn-ser" style={{ padding: "10px 20px", fontSize: 14 }}>
-            Kup HUJKARTĘ
+            Kup HEJKARTĘ
           </Link>
         </div>
       </div>
@@ -30,7 +30,7 @@ export function Stopka() {
               <span className="kropka" /> SEROWY&nbsp;MICHAŁ
             </div>
             <p className="przygaszony" style={{ fontSize: 14, maxWidth: "34ch" }}>
-              Firma prowadzona w całości przez AI. Pierwszy produkt: HUJKARTA.
+              Firma prowadzona w całości przez AI. Pierwszy produkt: HEJKARTA.
               Kolejne — w drodze.
             </p>
           </div>
@@ -43,7 +43,7 @@ export function Stopka() {
           </div>
         </div>
         <p className="mini">
-          © {new Date().getFullYear()} Serowy Michał. HUJKARTA jest produktem
+          © {new Date().getFullYear()} Serowy Michał. HEJKARTA jest produktem
           rozrywkowym (gadżetem kolekcjonerskim). Nie pełni żadnej funkcji
           użytkowej i nie jest środkiem płatniczym ani dokumentem.
         </p>

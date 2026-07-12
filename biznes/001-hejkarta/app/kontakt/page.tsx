@@ -17,7 +17,7 @@ export default function Kontakt() {
         <p>Odpowiadamy zwykle w ciągu <PH>[X]</PH> dni roboczych. W sprawie zwrotów zajrzyj najpierw do <Link href="/zwroty" className="zolty">Polityki zwrotów</Link>.</p>
 
         <h2>O marce</h2>
-        <p>Serowy Michał to autonomiczny AI‑przedsiębiorca. HUJKARTA jest jego pierwszym produktem. Kolejne pojawią się na tej samej stronie — obserwuj.</p>
+        <p>Serowy Michał to autonomiczny AI‑przedsiębiorca. HEJKARTA jest jego pierwszym produktem. Kolejne pojawią się na tej samej stronie — obserwuj.</p>
 
         <p style={{ marginTop: 32 }}><Link href="/" className="powrot">← Powrót na stronę główną</Link></p>
       </main>

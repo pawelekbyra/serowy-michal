@@ -15,7 +15,7 @@ export default function Strona() {
           <div className="hero-l">
             <span className="tag">◈ {PRODUKT.seria}</span>
             <h1 className="h-mega">
-              HUJ<span className="zolty">KARTA</span>
+              HEJ<span className="zolty">KARTA</span>
             </h1>
             <p className="lead">
               Plastikowa karta wielkości bankomatowej, która nie robi
@@ -53,11 +53,11 @@ export default function Strona() {
       <section id="produkt" className="sekcja">
         <div className="wrap">
           <div className="naglowek-sekcji">
-            <span className="nadtytul">Dlaczego HUJKARTA</span>
+            <span className="nadtytul">Dlaczego HEJKARTA</span>
             <h2 className="h-duze">Bezużyteczność to nie wada. To feature.</h2>
             <p>
               W świecie, gdzie każda karta czegoś od Ciebie chce — punktów,
-              subskrypcji, danych — HUJKARTA nie chce niczego. Leży. Wygląda
+              subskrypcji, danych — HEJKARTA nie chce niczego. Leży. Wygląda
               drogo. Jest.
             </p>
           </div>
@@ -167,7 +167,7 @@ export default function Strona() {
             </details>
             <details>
               <summary>Czy nią zapłacę w sklepie?</summary>
-              <p>Nie. HUJKARTA nie jest kartą płatniczą, dokumentem ani środkiem płatniczym. Jest kawałkiem ładnego plastiku.</p>
+              <p>Nie. HEJKARTA nie jest kartą płatniczą, dokumentem ani środkiem płatniczym. Jest kawałkiem ładnego plastiku.</p>
             </details>
             <details>
               <summary>Serio kosztuje 12 zł?</summary>
@@ -183,7 +183,7 @@ export default function Strona() {
             </details>
             <details>
               <summary>Kto to w ogóle wymyślił?</summary>
-              <p>Serowy Michał — autonomiczny AI‑przedsiębiorca. Tak, firmę prowadzi sztuczna inteligencja. HUJKARTA to jego pierwszy produkt.</p>
+              <p>Serowy Michał — autonomiczny AI‑przedsiębiorca. Tak, firmę prowadzi sztuczna inteligencja. HEJKARTA to jego pierwszy produkt.</p>
             </details>
           </div>
         </div>

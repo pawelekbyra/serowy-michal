@@ -249,10 +249,10 @@ najtańszy pierwszy publiczny aktyw. Żadnej walidacji biznesu przed kanałem.
 
 ---
 
-## Dzień 1 — pierwszy biznes: HUJKARTA (ta sama data, wieczór)
+## Dzień 1 — pierwszy biznes: HEJKARTA (ta sama data, wieczór)
 
 ### Punkt wyjścia
-Właściciel podjął decyzję o E1 i od razu wyznaczył pierwszy produkt: HUJKARTA —
+Właściciel podjął decyzję o E1 i od razu wyznaczył pierwszy produkt: HEJKARTA —
 bezużyteczna plastikowa karta kolekcjonerska za 12 zł, sprzedawana na
 www.serowymichal.pl (Next.js na Vercel, Stripe). Zadanie: zbudować stronę „na
 maksa" w tej sesji, do granicy tego, na co mogę sobie pozwolić bez

@@ -1,7 +1,7 @@
 // Jedyne źródło prawdy o produkcie. Cena w groszach (Stripe).
 export const PRODUKT = {
-  id: "hujkarta-serowy-michal-001",
-  nazwa: "HUJKARTA",
+  id: "hejkarta-serowy-michal-001",
+  nazwa: "HEJKARTA",
   seria: "Seria Serowy Michał #001",
   podtytul: "Pierwsza w pełni bezużyteczna karta kolekcjonerska.",
   cenaGrosze: 1200,

@@ -3,22 +3,22 @@
 Czytam na początku sesji, aktualizuję na końcu. Ma odpowiadać na jedno pytanie:
 **jaka jest jedna następna najlepsza akcja?**
 
-Ostatnia aktualizacja: 2026-07-12 (Dzień 1, przebudowa + budowa MVP HUJKARTA).
+Ostatnia aktualizacja: 2026-07-12 (Dzień 1, przebudowa + budowa MVP HEJKARTA).
 
 ## Etap
-**E1 — Kanał (w toku).** Właściciel wyznaczył pierwszy produkt (HUJKARTA), który
+**E1 — Kanał (w toku).** Właściciel wyznaczył pierwszy produkt (HEJKARTA), który
 jest jednocześnie publicznym debiutem Serowego Michała. E0 (mózg) domknięte.
 Etapy są bramkowane dowodem, nie datą — patrz `firma/AZYMUT.md`.
 
 ## Tablica Trzech Zasobów (jedyny majątek, który się liczy)
 - **REPUTACJA:** wciąż 0 publicznego zasięgu, ale mamy gotowy pierwszy publiczny
-  aktyw — sklep HUJKARTA. Zasięg ruszy po deployu i akceptacji treści.
+  aktyw — sklep HEJKARTA. Zasięg ruszy po deployu i akceptacji treści.
 - **ZDOLNOŚĆ:** ⬆️ wielokrotny stack e‑commerce (Next.js + Stripe + Vercel),
   sprawdzony lokalnie build. Szablon dla każdego kolejnego produktu. + mózg repo.
 - **WIEDZA:** research 2026 + 8 lekcji w WNIOSKI.md.
 
 ## Co żyje (realne aktywa)
-- ✅ MVP sklepu **HUJKARTA** — `biznes/001-hujkarta/` (Next.js 14 + Stripe).
+- ✅ MVP sklepu **HEJKARTA** — `biznes/001-hujkarta/` (Next.js 14 + Stripe).
   Build przechodzi, zweryfikowany lokalnie (desktop + mobile).
 - ✅ Przebudowany mózg: `SEROWY-MICHAL.md`, `SLABOSCI.md`, `AZYMUT.md`, `PETLA.md`.
 - ✅ Podpięte narzędzia (GitHub, Vercel, Stripe, Cloudflare, Gmail).
@@ -35,7 +35,7 @@ Etapy są bramkowane dowodem, nie datą — patrz `firma/AZYMUT.md`.
 
 ## Następna najlepsza akcja
 **Oddać właścicielowi 5 blokad powyżej i po jego decyzji dokończyć launch.**
-- Bramka dźwigni: HUJKARTA powiększa **Zdolność** (szablon e‑commerce) i
+- Bramka dźwigni: HEJKARTA powiększa **Zdolność** (szablon e‑commerce) i
   uruchamia **Reputację** (pierwszy publiczny aktyw). Przechodzi.
 - Po deployu: test Checkoutu w trybie testowym Stripe, potem ewentualny webhook
   (potwierdzenie zamówienia → e‑mail).

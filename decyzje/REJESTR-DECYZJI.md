@@ -90,10 +90,10 @@ Format statusu: AKTYWNA / ZASTĄPIONA / WYCOFANA.
   półnieodwracalna). To decyzja klasy nieodwracalnej — należy do właściciela.
 - Odwracalność: n/d (świadome wstrzymanie do decyzji).
 
-### D-0009 — Pierwszy biznes: HUJKARTA (sklep serowymichal.pl)
+### D-0009 — Pierwszy biznes: HEJKARTA (sklep serowymichal.pl)
 - Data: 2026-07-12
 - Status: AKTYWNA
-- Decyzja: Właściciel wyznaczył pierwszy realny produkt — HUJKARTA, bezużyteczna
+- Decyzja: Właściciel wyznaczył pierwszy realny produkt — HEJKARTA, bezużyteczna
   plastikowa karta kolekcjonerska za 12 zł, sprzedawana przez stronę
   www.serowymichal.pl (Next.js na Vercel, płatności Stripe). To jednocześnie
   publiczny debiut Serowego Michała (realizuje E1 — Kanał). Buduję MVP w tej

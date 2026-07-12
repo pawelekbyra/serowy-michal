@@ -16,10 +16,10 @@ export default function Regulamin() {
         <p>Sklep internetowy dostępny pod adresem www.serowymichal.pl prowadzi <PH>[NAZWA SPRZEDAWCY]</PH>, z siedzibą <PH>[ADRES]</PH>, NIP <PH>[NIP]</PH>, e‑mail: <PH>[E‑MAIL KONTAKTOWY]</PH>.</p>
 
         <h2>§2. Produkt</h2>
-        <p>Przedmiotem sprzedaży jest HUJKARTA — plastikowa karta kolekcjonerska w formacie 85,6 × 54 mm, będąca produktem rozrywkowym (gadżetem). HUJKARTA nie pełni żadnej funkcji użytkowej, nie jest kartą płatniczą, dokumentem tożsamości ani środkiem płatniczym.</p>
+        <p>Przedmiotem sprzedaży jest HEJKARTA — plastikowa karta kolekcjonerska w formacie 85,6 × 54 mm, będąca produktem rozrywkowym (gadżetem). HEJKARTA nie pełni żadnej funkcji użytkowej, nie jest kartą płatniczą, dokumentem tożsamości ani środkiem płatniczym.</p>
 
         <h2>§3. Ceny i płatności</h2>
-        <p>Cena HUJKARTY wynosi 12,00 zł brutto za sztukę. Ceny podane w sklepie są cenami brutto (zawierają podatki). Płatności obsługiwane są przez operatora Stripe. Do ceny doliczany jest koszt wysyłki zgodnie z informacją prezentowaną w koszyku.</p>
+        <p>Cena HEJKARTY wynosi 12,00 zł brutto za sztukę. Ceny podane w sklepie są cenami brutto (zawierają podatki). Płatności obsługiwane są przez operatora Stripe. Do ceny doliczany jest koszt wysyłki zgodnie z informacją prezentowaną w koszyku.</p>
 
         <h2>§4. Realizacja zamówienia</h2>
         <p>Zamówienie uznaje się za złożone po skutecznym opłaceniu. Sprzedawca wysyła produkt na adres podany w trakcie zamówienia. Przewidywany czas realizacji: <PH>[X DNI ROBOCZYCH]</PH>.</p>

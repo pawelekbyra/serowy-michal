@@ -1,4 +1,4 @@
-# HUJKARTA — live log
+# HEJKARTA — live log
 
 ## Sesja 2026-07-12 (Dzień 1, budowa MVP)
 
@@ -25,6 +25,6 @@
 - [ ] Rozważyć Stripe webhook (potwierdzenie zamówienia → e‑mail).
 
 ### Otwarte pytania do właściciela
-- Tożsamość/ton publiczny: zostajemy przy pełnej wulgarnej nazwie „HUJKARTA"
+- Tożsamość/ton publiczny: zostajemy przy pełnej wulgarnej nazwie „HEJKARTA"
   w meta/OG (SEO to lubi, ale filtry treści reklam mogą blokować kampanie).
 - Czy chcemy od razu wariant „18+" / disclaimer, czy produkt jest neutralny.

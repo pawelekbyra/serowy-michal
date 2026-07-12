@@ -45,7 +45,7 @@ export default function Kup() {
           </div>
           <div className="cena-panel">
             <span className="nadtytul">{PRODUKT.seria}</span>
-            <h1 className="h-duze" style={{ margin: "10px 0 6px" }}>HUJKARTA</h1>
+            <h1 className="h-duze" style={{ margin: "10px 0 6px" }}>HEJKARTA</h1>
             <p className="przygaszony" style={{ marginBottom: 18 }}>{PRODUKT.podtytul}</p>
             <div className="cena">
               {PRODUKT.cenaZl.split(",")[0]}<small>,{PRODUKT.cenaZl.split(",")[1]}</small>

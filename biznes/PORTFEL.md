@@ -8,9 +8,9 @@ nie jest tu — jest w `firma/SEROWY-MICHAL.md`.
 ## Aktywne / w walidacji
 | ID | Biznes | Status | Etap | MRR | Następny krok |
 |----|--------|--------|------|-----|---------------|
-| 001 | HUJKARTA (sklep serowymichal.pl) | MVP GOTOWY (kod) | E1 (Kanał) | 0 zł | Deploy na Vercel + dane sprzedawcy + zgoda właściciela |
+| 001 | HEJKARTA (sklep serowymichal.pl) | MVP GOTOWY (kod) | E1 (Kanał) | 0 zł | Deploy na Vercel + dane sprzedawcy + zgoda właściciela |
 
-**001 — HUJKARTA:** pierwszy realny produkt i jednocześnie publiczny debiut
+**001 — HEJKARTA:** pierwszy realny produkt i jednocześnie publiczny debiut
 Serowego Michała (E1). Bezużyteczna karta kolekcjonerska za 12 zł. Sklep w
 Next.js + Stripe zbudowany i zweryfikowany lokalnie (`biznes/001-hujkarta/`).
 Decyzja właściciela D-0009. Blokady przed sprzedażą: dane sprzedawcy w regulaminie,

@@ -1,8 +1,8 @@
 {
-  "name": "hujkarta-sklep",
+  "name": "hejkarta-sklep",
   "version": "0.1.0",
   "private": true,
-  "description": "Sklep HUJKARTA — seria Serowy Michał. Bezużyteczna karta kolekcjonerska.",
+  "description": "Sklep HEJKARTA — seria Serowy Michał. Bezużyteczna karta kolekcjonerska.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

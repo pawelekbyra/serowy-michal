@@ -1,4 +1,4 @@
-# Biznes 001 — HUJKARTA (sklep serowymichal.pl)
+# Biznes 001 — HEJKARTA (sklep serowymichal.pl)
 
 - **Status:** MVP GOTOWY (kod) → czeka na deploy i decyzje właściciela
 - **Etap firmy:** to jest jednocześnie E1 (Kanał — publiczny debiut Serowego
@@ -7,7 +7,7 @@
 - **Stack:** Next.js 14 (App Router, TypeScript) + Stripe, hosting Vercel.
 
 ## Produkt
-HUJKARTA — plastikowa karta w formacie bankomatowym (85,6 × 54 mm), która nie
+HEJKARTA — plastikowa karta w formacie bankomatowym (85,6 × 54 mm), która nie
 pełni żadnej funkcji. Sprzedawana jako gadżet kolekcjonerski / śmieszny prezent.
 Cena: **12,00 zł**. Seria „Serowy Michał #001". Na razie jeden produkt.
 
@@ -32,18 +32,18 @@ produktu premium (specyfikacja „0 funkcji", złota karta, chip do niczego).
 4. **Akceptacja właściciela** treści publicznej i uruchomienia płatności.
 
 ## Deploy na Vercel
-- Root Directory w Vercel: `biznes/001-hujkarta`.
+- Root Directory w Vercel: `biznes/001-hejkarta`.
 - Framework: Next.js (auto). Build: `next build`. Node 20+.
 - Domena: `www.serowymichal.pl` (właściciel podłącza).
 - Env: `STRIPE_SECRET_KEY` (gdy ruszamy sprzedaż), opcj. `NEXT_PUBLIC_BASE_URL`.
 
 ## Uruchomienie lokalne
 ```
-cd biznes/001-hujkarta
+cd biznes/001-hejkarta
 npm install
 npm run dev   # http://localhost:3000
 ```
 
 ## Powiązania w pamięci firmy
 - Portfel: `biznes/PORTFEL.md` · Decyzja: `decyzje/REJESTR-DECYZJI.md` (D-0009)
-- Live log: `biznes/001-hujkarta/NOTATKI.md`
+- Live log: `biznes/001-hejkarta/NOTATKI.md`

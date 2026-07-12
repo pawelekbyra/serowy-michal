@@ -26,7 +26,7 @@ export default function Zwroty() {
         <p>Bezpośredni koszt odesłania produktu ponosi kupujący. Produkt powinien wrócić w stanie nienaruszonym (co przy przedmiocie, który i tak nic nie robi, nie powinno być trudne).</p>
 
         <h2>Reklamacje</h2>
-        <p>Jeśli HUJKARTA dotarła uszkodzona — zgłoś to na adres e‑mail. Wymienimy ją lub zwrócimy pieniądze.</p>
+        <p>Jeśli HEJKARTA dotarła uszkodzona — zgłoś to na adres e‑mail. Wymienimy ją lub zwrócimy pieniądze.</p>
 
         <p style={{ marginTop: 32 }}><Link href="/" className="powrot">← Powrót na stronę główną</Link></p>
       </main>
