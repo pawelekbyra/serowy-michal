@@ -37,6 +37,10 @@ Etapy są bramkowane dowodem, nie datą — patrz `firma/AZYMUT.md`.
   merge, brakuje tylko decyzji właściciela.
 - ✅ Przebudowany mózg: `SEROWY-MICHAL.md`, `SLABOSCI.md`, `AZYMUT.md`, `PETLA.md`.
 - ✅ Podpięte narzędzia (GitHub, Vercel, Stripe, Cloudflare, Gmail).
+- ✅ **Portfel kandydatów do E2** (research 2026, popyt = [FAKT] ze źródłem):
+  004 Strażnik RODO (rekom. #1 — moat rośnie, dogfooding), 005 Opiniomat
+  (opinie Google), 006 Oddzwaniacz (missed‑call). Wszystkie DO-WALIDACJI,
+  wstrzymane do E2 (kanał przed biznesem). Szczegóły: `pomysly/00{4,5,6}-*/`.
 - Brak przychodu i zasięgu (OCZEKIWANE — sprzedaż celowo wyłączona, zasięg
   czeka na zgodę właściciela na publiczną komunikację).
 

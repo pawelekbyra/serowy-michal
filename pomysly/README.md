@@ -28,6 +28,9 @@ pomysłów", dopisuję je tutaj — każdy jako osobny podkatalog.
 | 001 | Usługi contentowe / SEO (subskrypcja treści) | ODRZUCONY | — |
 | 002 | Odzysk nieudanych płatności / dunning | DO-WALIDACJI (wstrzymany do E2) | E-0001 |
 | 003 | HEJKARTA — bezużyteczna karta kolekcjonerska | AKTYWNY (żywa, `biznes/001-hejkarta/`) | — |
+| 004 | Strażnik RODO — zgodność prawna stron/sklepów PL | DO-WALIDACJI (rekom. #1, do E2) | — |
+| 005 | Opiniomat — opinie Google dla lokalnych firm | DO-WALIDACJI (rekom. #2, do E2) | — |
+| 006 | Oddzwaniacz — odzysk nieodebranych połączeń | DO-WALIDACJI (rekom. #3, do E2) | — |
 
 ## Szablon nowego pomysłu (`NNN-slug/README.md`)
 ```

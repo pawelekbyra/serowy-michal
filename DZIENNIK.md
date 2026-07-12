@@ -350,3 +350,53 @@ pieniędzy). Po powrocie właściciela: review + merge PR #14 (sklepikFront) i
 decyzja o blokadach sprzedaży HEJKARTY (STAN.md).
 
 *— Serowy Michał*
+
+---
+
+## Dzień 1 — research: 3 realne kandydatury do portfela (ta sama data, później)
+
+### Punkt wyjścia
+Właściciel zlecił: zrobić dobry research i dopisać do `pomysly/` trzy **realne**
+pomysły. Ryzyko z góry nazwane: to może być busywork (S-1) i „przeczucie zamiast
+popytu" (S-3, L-001). Dlatego twardy wymóg: pkt 2 filtra AZYMUT („ktoś JUŻ
+płaci") musi być **[FAKT] ze źródłem**, nie [ZGADYWANIE].
+
+### Co zbudowano
+Research (6 zapytań webowych, źródła 2026) → 3 kandydatów, każdy jako
+`pomysly/NNN-slug/README.md` z pełnym filtrem AZYMUT i uczciwym werdyktem:
+- **004 — Strażnik RODO** (rekom. #1): baner cookie + auto‑aktualizowane polityki
+  prawne dla stron/sklepów PL. Płacący rynek [FAKT]: CookieYes od ~10 USD/mies,
+  iubenda, Cookiebot; kary do €20 mln/4%, enforcement schodzi na małe firmy.
+- **005 — Opiniomat** (rekom. #2): zbieranie + AI‑odpowiadanie na opinie Google
+  dla lokalnych firm. Popyt [FAKT]: 19–99 USD/mies, opinie ~20% czynnika
+  rankingu map, 82% konsumentów je czyta.
+- **006 — Oddzwaniacz** (rekom. #3): missed‑call text‑back dla fachowców. Ból
+  [FAKT] najbardziej policzalny: 85% dzwoniących nie oddzwania, strata
+  16,8–252 tys. USD/rok; ceny 24,95–500 USD/mies.
+
+### Rozumowanie (dlaczego takie uszeregowanie, nie „3 równe")
+Ranking wg dopasowania do NASZEJ pozycji, nie ogólnej atrakcyjności:
+- 004 wygrywa, bo jako jedyny ma **moat rosnący z czasem** (utrzymywane *polskie*
+  prawo — nie do skopiowania jednym API), **retencję z natury problemu** (prawo
+  się zmienia) i **dogfooding** (mamy już strony prawne w HEJKARCIE → niższy
+  koszt startu).
+- 005 ma najtwardszy popyt, ale rynek gęsty i słabsze dopasowanie kanału.
+- 006 ma najbardziej policzalny ból, ale **realny koszt zmienny** (telefonia/SMS)
+  łamie zaletę „produkcja darmowa" i wprowadza tarcie regulacyjne (prawo
+  telekom + RODO). Stąd #3.
+Wszystkie trzy: **DO-WALIDACJI, wstrzymane do E2** — zgodnie z AZYMUT nie
+waliduję biznesu przed kanałem. To materiał na wybór wertykali, gdy pojawi się
+realny sygnał, nie polecenie „budować teraz".
+
+### Test sesji
+Powiększa **Wiedzę** (3 zwalidowane popytowo kierunki z [FAKT], nie zgadywaniem)
+i **Zdolność** (gotowy portfel kandydatów + kąt dogfoodingu 004). Przechodzi
+Bramkę dźwigni. Nie jest busyworkiem, bo każdy pomysł ma metrykę taniej
+falsyfikacji i wejdzie w grę dopiero przy sygnale z kanału.
+
+### Następny krok
+Bez zmian w priorytecie: kanał (E1) przed walidacją biznesu. Gdy właściciel
+zdecyduje o E2 (sygnał z kanału) — pierwszy do taniego testu: 004 (landing +
+darmowy skaner RODO jako lead‑magnet, metryka ≥20 zapisów/30 dni).
+
+*— Serowy Michał*
