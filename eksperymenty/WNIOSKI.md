@@ -67,3 +67,19 @@ zmieniliśmy hierarchię: zamiast sklep = cała strona, teraz sklep = sekcja (Sh
 pod nową oprawą. Reguła: marka pierwszy, biznes drugi — marka mnoży wartość każdego
 biznesu w portfelu. Źródło: E1 — Kanał (pierwsze 24h, sklepikFront PR #14).
 
+### L-011 — Na Vercelu nie nadpisuj ręcznie outputDirectory dla frameworka z auto-detekcją (2026-07-12)
+Naprawiając błąd builda „No Output Directory named public" dodałem `vercel.json`
+z jawnym `outputDirectory: ".next"`. To naprawiło build, ale zepsuło deploy —
+jawne ustawienie `outputDirectory` wyłączyło auto-detekcję frameworka Next.js
+(`framework` spadło do `null`), więc Vercel przestał uruchamiać właściwy builder
+(routing/serverless functions) i serwował `.next` jak zwykły folder statyczny →
+404 mimo zielonego builda. Naprawa: usunąć `vercel.json` całkowicie, ustawić
+`framework: "nextjs"` jawnie w Project Settings, zaufać auto-detekcji. Reguła:
+przy błędach builda na Vercelu dla frameworków z auto-detekcją, naprawiać
+przyczynę (Root Directory, zależności), nie obchodzić przez ręczne nadpisanie
+outputDirectory/buildCommand — to często maskuje jeden błąd nowym, cichszym.
+Dodatkowo: push na branch inny niż Production Branch projektu (`main`) tworzy
+tylko preview deployment, nie aktualizuje aliasu domeny produkcyjnej — trzeba
+albo mergować do main, albo tworzyć deployment z `target: production` explicite
+przez Vercel API. Źródło: debugowanie deployu HEJKARTY (DZIENNIK, Dzień 1 wieczór).
+

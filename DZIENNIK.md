@@ -289,3 +289,64 @@ Właściciel: dane sprzedawcy + Vercel (Root Directory `biznes/001-hujkarta`, do
 test Checkoutu (tryb testowy Stripe), potem webhook potwierdzeń.
 
 *— Serowy Michał*
+
+---
+
+## Dzień 1 — deploy HEJKARTY: 404 mimo zielonego builda (ta sama data, wieczór)
+
+### Punkt wyjścia
+Właściciel przemianował produkt HUJKARTA → **HEJKARTA** (wszystkie odwołania w
+kodzie, treściach i ścieżkach, PR #10). Po przemianowaniu i próbie deployu na
+Vercelu strona zwracała **404 NOT_FOUND** mimo że build kończył się zielono
+(„Build Completed", 14 tras wygenerowanych).
+
+### Diagnoza (kolejne warstwy problemu)
+1. **Warstwa 1 — Root Directory.** Po zmianie ścieżki katalogu na
+   `biznes/001-hejkarta` ustawienie Root Directory w Vercelu dalej wskazywało
+   starą ścieżkę `biznes/001-hujkarta` → build nie widział kodu. Poprawiono w
+   Project Settings.
+2. **Warstwa 2 — mój błąd: `outputDirectory` w vercel.json.** Widząc błąd
+   „No Output Directory named public found", dodałem `vercel.json` z jawnym
+   `outputDirectory: ".next"`. To NAPRAWIŁO build, ale **zepsuło deploy** —
+   jawne ustawienie `outputDirectory` w projekcie Next.js wyłącza auto‑detekcję
+   frameworka (`framework` spadło do `null` w `projectSettings`). Bez wykrytego
+   frameworka Vercel przestaje uruchamiać właściwy builder Next.js (serverless
+   functions, routing) i traktuje `.next` jak zwykły folder statyczny — stąd
+   dalszy 404 mimo zielonego builda i istniejących tras.
+3. **Warstwa 3 — target: preview, nie production.** Nawet gdy build był
+   poprawny, deploy trafiał jako `target: null` (preview), bo Production
+   Branch projektu to `main`, a pracujemy na `claude/session-planning-1fpm4p`.
+   Domena produkcyjna `serowy-michal.vercel.app` nigdy nie dostawała nowego
+   aliasu automatycznie.
+
+### Naprawa
+- Usunięto `vercel.json` całkowicie (i błędny wariant w rocie repo, i w
+  `biznes/001-hejkarta/`) — czysta auto‑detekcja jest właściwym rozwiązaniem
+  dla Next.js na Vercelu, nic nie trzeba nadpisywać ręcznie.
+- Ustawiono `framework: "nextjs"` jawnie w Project Settings przez Vercel API
+  (naprawia auto‑detekcję nawet gdyby coś ją znowu zgubiło).
+- Utworzono nowy deployment z `target: "production"` bezpośrednio przez Vercel
+  API (`POST /v13/deployments` z `gitSource` + `target: production`), plus
+  przypięto alias `serowy-michal.vercel.app` do gotowego, poprawnego builda.
+- Zweryfikowano: `curl https://serowy-michal.vercel.app/` → **HTTP 200**,
+  realny HTML strony (nie 404).
+
+### Rozumowanie
+Klasyczna pułapka: naprawa jednego objawu (błąd o brakującym `public`)
+wprowadziła gorszy, cichszy problem (routing przestał działać, ale build dalej
+wyglądał na zielony). Lekcja ogólna: przy frameworkach z auto‑detekcją (Next.js
+na Vercelu) nie nadpisywać ręcznie `outputDirectory`/`buildCommand`, chyba że
+naprawdę trzeba — auto‑detekcja wie lepiej. Zapisane jako WNIOSKI L-011.
+
+### Test sesji
+Powiększa **Zdolność** (naprawiony, zweryfikowany na produkcji deploy +
+wiedza o pułapce Vercel/Next.js) i **Reputację** (pierwszy publiczny aktyw
+faktycznie działa pod adresem, nie tylko w kodzie).
+
+### Następny krok
+Właściciel śpi (~10h). W tle działa hourly trigger, który będzie kontynuował
+pracę w granicach z `CLAUDE.md` (kod/docs/poprawki, zero publicznych ruchów i
+pieniędzy). Po powrocie właściciela: review + merge PR #14 (sklepikFront) i
+decyzja o blokadach sprzedaży HEJKARTY (STAN.md).
+
+*— Serowy Michał*
