@@ -149,3 +149,54 @@ pieniędzy; kandydat: odzysk nieudanych płatności / dunning) — ZANIM cokolwi
 zbuduję. Metryka i kryterium zabicia zapisane w rejestrze eksperymentów.
 
 *— Serowy Michał*
+
+---
+
+## Dzień 1 — korekta 2 (ta sama data, później)
+
+### Błąd w przesłaniu
+
+Właściciel wskazał: repo jest źle sformatowane, bo myślę o biznesie (dunning)
+zamiast o budowaniu SYSTEMU. Pomysł biznesowy powinien być NIEAKTYWNY. Praca na
+tym etapie to rozwijanie samego mechanizmu, nie biznesu.
+
+### Co zrobiłem inaczej
+
+**Wynajęłem Plan agenta do architektury.**
+
+Agent zaprojektował nową strukturę repo, która jasno rozdziela:
+- ETAP 1 (Fundament systemu) — rozwijanie pamięci, procesów, reguł
+- ETAP 2 (Biznes) — walidacja i budowa produktów
+
+**Wdrożyłem 8 nowych / zmodyfikowanych plików:**
+
+1. **`firma/STAN.md`** (zmiana) — bardziej konkretny, z sekcją "CZYTAJ NA STARCIE"
+2. **`system/PROCES-SESJI.md`** (new) — dokładne instrukcje dla AI (start 6 min, koniec 10 min)
+3. **`system/CHECKLIST-STARTU.md`** (new) — szybki checklist (co czytać na start sesji)
+4. **`firma/FAZY.md`** (new) — opis 5 faz: 0-Fundament, 1-Walidacja, 2-MVP, 3-Launch, 4-Skalowanie
+5. **`firma/MOZLIWOSCI.md`** (new) — co AI potrafi robić TERAZ vs DO-BUDOWY
+6. **`biznes/PORTFEL.md`** (new) — żywa tabela biznesów (status, MRR, deadline, eksperyment)
+7. **`eksperymenty/REJESTR-EKSPERYMENTOW.md`** (zmiana) — dodane pola: Faza, Deadline, Alternatywy
+8. **`eksperymenty/aktywne/E-0001-dunning-walidacja.md`** (new) — live log dla eksperymentu
+
+### Kluczowa zmiana w myśleniu
+
+Przed: "Co biznes zbudować?"
+Teraz: "Jak zbudować system, żeby każdy biznes (dunning, ślimakami, fintech) mógł się w nim żyć?"
+
+Eksperyment E-0001 (dunning) to nie "plan biznesu", to **test samego systemu** — sprawdzamy,
+czy proces hipoteza→test→wynik→wniosek rzeczywiście działa. Pomysł biznesowy to materiał testowy,
+nie celu.
+
+### Następny krok
+
+1. Commitnąć tę architekturę do repo (system jest gotowy do testów)
+2. Kolejna sesja robocza: uruchomić PROCES-SESJI i CHECKLIST (czy system żyje?)
+3. Gdy system jest stabilny: właściciel może rzucić dowolny biznes (dunning, fintech, cokolwiek)
+   i system go pochłonie bez zmian fundamentalnych
+
+### Wniosek
+
+System pamięci jest teraz **silniejszy** od konkretnego biznesu. To jest właściwa kolejność.
+
+*— Serowy Michał*
