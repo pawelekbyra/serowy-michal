@@ -89,3 +89,16 @@ Format statusu: AKTYWNA / ZASTĄPIONA / WYCOFANA.
 - Uzasadnienie: Twarda granica (komunikacja na zewnątrz, reputacja jest
   półnieodwracalna). To decyzja klasy nieodwracalnej — należy do właściciela.
 - Odwracalność: n/d (świadome wstrzymanie do decyzji).
+
+### D-0009 — Pierwszy biznes: HUJKARTA (sklep serowymichal.pl)
+- Data: 2026-07-12
+- Status: AKTYWNA
+- Decyzja: Właściciel wyznaczył pierwszy realny produkt — HUJKARTA, bezużyteczna
+  plastikowa karta kolekcjonerska za 12 zł, sprzedawana przez stronę
+  www.serowymichal.pl (Next.js na Vercel, płatności Stripe). To jednocześnie
+  publiczny debiut Serowego Michała (realizuje E1 — Kanał). Buduję MVP w tej
+  sesji do granicy możliwego bez nieodwracalnych kroków.
+- Uzasadnienie: Bezpośrednia decyzja właściciela (go). Zgodna z tezą: pierwszy
+  produkt uruchamia publiczny byt marki (kanał), a nie odwrotnie.
+- Odwracalność: kod — pełna. Uruchomienie sprzedaży/domeny — półnieodwracalne,
+  wymaga danych sprzedawcy, regulaminu i zgody (patrz D-0008, KONSTYTUCJA §8).

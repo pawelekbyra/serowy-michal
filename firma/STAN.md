@@ -3,41 +3,43 @@
 Czytam na początku sesji, aktualizuję na końcu. Ma odpowiadać na jedno pytanie:
 **jaka jest jedna następna najlepsza akcja?**
 
-Ostatnia aktualizacja: 2026-07-12 (Dzień 1, przebudowa architektury).
+Ostatnia aktualizacja: 2026-07-12 (Dzień 1, przebudowa + budowa MVP HUJKARTA).
 
 ## Etap
-**E0 — Mózg (kończymy) → E1 — Kanał (start po decyzji właściciela).**
+**E1 — Kanał (w toku).** Właściciel wyznaczył pierwszy produkt (HUJKARTA), który
+jest jednocześnie publicznym debiutem Serowego Michała. E0 (mózg) domknięte.
 Etapy są bramkowane dowodem, nie datą — patrz `firma/AZYMUT.md`.
 
 ## Tablica Trzech Zasobów (jedyny majątek, który się liczy)
-- **REPUTACJA:** 0 publicznego zasięgu. Repo istnieje, ale nie jest jeszcze
-  świadomie prowadzone jako publiczny byt. To następne wąskie gardło.
-- **ZDOLNOŚĆ:** podpięte i niesprawdzone w boju narzędzia (GitHub, Vercel,
-  Stripe live, Cloudflare, Gmail). Architektura pamięci — przebudowana dziś.
-- **WIEDZA:** research rynku 2026 + 8 lekcji w WNIOSKI.md.
+- **REPUTACJA:** wciąż 0 publicznego zasięgu, ale mamy gotowy pierwszy publiczny
+  aktyw — sklep HUJKARTA. Zasięg ruszy po deployu i akceptacji treści.
+- **ZDOLNOŚĆ:** ⬆️ wielokrotny stack e‑commerce (Next.js + Stripe + Vercel),
+  sprawdzony lokalnie build. Szablon dla każdego kolejnego produktu. + mózg repo.
+- **WIEDZA:** research 2026 + 8 lekcji w WNIOSKI.md.
 
 ## Co żyje (realne aktywa)
-- ✅ Przebudowany mózg: `SEROWY-MICHAL.md`, `SLABOSCI.md`, `AZYMUT.md`,
-  `KONSTYTUCJA.md`, `system/PETLA.md`. Oś: produktem jest Serowy Michał.
-- ✅ Podpięte narzędzia (jak wyżej) — niesprawdzone realnym użyciem.
-- ✅ Research 2026 (`wiedza/rynek-2026-07.md`), pomysły w `pomysly/`.
-- Brak produktu, klientów, przychodu, publicznego zasięgu (OCZEKIWANE na E0/E1).
+- ✅ MVP sklepu **HUJKARTA** — `biznes/001-hujkarta/` (Next.js 14 + Stripe).
+  Build przechodzi, zweryfikowany lokalnie (desktop + mobile).
+- ✅ Przebudowany mózg: `SEROWY-MICHAL.md`, `SLABOSCI.md`, `AZYMUT.md`, `PETLA.md`.
+- ✅ Podpięte narzędzia (GitHub, Vercel, Stripe, Cloudflare, Gmail).
+- Brak przychodu i zasięgu (OCZEKIWANE — czekamy na deploy + zgodę).
 
-## Otwarta decyzja właściciela (blokuje E1)
-**Go/no‑go na uczynienie Serowego Michała bytem publicznym.** Bez tego kanał —
-a więc główny moat — nie powstaje. Opcje do rozstrzygnięcia: jak publicznie
-(publiczne repo jako pierwszy krok? później prosta strona / kanał?), pod jaką
-tożsamością, z jaką częstotliwością. To dotyka twardej granicy (komunikacja na
-zewnątrz), więc czekam na Twoją decyzję, zanim cokolwiek upublicznię.
+## Blokady przed sprzedażą HUJKARTY (wymagają właściciela)
+1. **Dane sprzedawcy** do stron prawnych (nazwa, adres, NIP, e‑mail, adres
+   zwrotów) — bez tego nie wolno pobierać płatności (twarda granica).
+2. **Vercel** — podłączenie repo (Root Directory `biznes/001-hujkarta`) + domena
+   `www.serowymichal.pl`.
+3. **`STRIPE_SECRET_KEY`** w env Vercel (gdy ruszamy sprzedaż).
+4. **Realizacja fizyczna** kart (druk + wysyłka) — do ustalenia.
+5. **Akceptacja** treści publicznej (wulgarna nazwa) i uruchomienia płatności.
 
 ## Następna najlepsza akcja
-**Domknąć E0 i postawić właścicielowi decyzję o E1.**
-- Bramka dźwigni: powiększa **Zdolność** (spójny, odchudzony mózg, który wymusza
-  właściwe zachowanie) i przygotowuje **Reputację** (E1).
-- Konkretnie następnym ruchem, po akceptacji kierunku przez właściciela:
-  zaprojektować najtańszy pierwszy publiczny aktyw Serowego Michała (do decyzji
-  go/no‑go), NIE walidować jeszcze żadnego biznesu.
-- Dunning (E-0001) pozostaje **wstrzymany** do E2 — dobry kandydat, zła kolejność.
+**Oddać właścicielowi 5 blokad powyżej i po jego decyzji dokończyć launch.**
+- Bramka dźwigni: HUJKARTA powiększa **Zdolność** (szablon e‑commerce) i
+  uruchamia **Reputację** (pierwszy publiczny aktyw). Przechodzi.
+- Po deployu: test Checkoutu w trybie testowym Stripe, potem ewentualny webhook
+  (potwierdzenie zamówienia → e‑mail).
+- Dunning (E-0001) pozostaje **wstrzymany** do E2.
 
 ## Zaktualizuj na koniec sesji
 - [ ] `firma/STAN.md` — etap, tablica Zasobów, jedna następna akcja.

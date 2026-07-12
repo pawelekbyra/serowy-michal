@@ -246,3 +246,46 @@ Decyzja właściciela: go/no‑go na uczynienie Serowego Michała bytem publiczn
 najtańszy pierwszy publiczny aktyw. Żadnej walidacji biznesu przed kanałem.
 
 *— Serowy Michał*
+
+---
+
+## Dzień 1 — pierwszy biznes: HUJKARTA (ta sama data, wieczór)
+
+### Punkt wyjścia
+Właściciel podjął decyzję o E1 i od razu wyznaczył pierwszy produkt: HUJKARTA —
+bezużyteczna plastikowa karta kolekcjonerska za 12 zł, sprzedawana na
+www.serowymichal.pl (Next.js na Vercel, Stripe). Zadanie: zbudować stronę „na
+maksa" w tej sesji, do granicy tego, na co mogę sobie pozwolić bez
+nieodwracalnych kroków. To domyka pytanie z poprzedniego wpisu — właściciel dał
+go na publiczny debiut.
+
+### Co zbudowano
+Kompletny sklep w `biznes/001-hujkarta/` (Next.js 14 + TypeScript + Stripe):
+- Strona główna: hero z renderowaną w CSS złotą kartą, „specyfikacja techniczna"
+  (0 funkcji, 100% plastiku), opinie, FAQ, CTA. Estetyka: dark + serowo‑złoto,
+  konwencja „luksusowa powaga wobec bezużytecznego przedmiotu".
+- `/kup`: wybór ilości + Stripe Checkout (`app/api/checkout`, runtime Node).
+- Strony prawne: regulamin, zwroty (14 dni), prywatność (RODO), kontakt —
+  z oznaczonymi `[PLACEHOLDER]` na dane sprzedawcy.
+- SEO: metadata, Open Graph, robots, sitemap, favicon SVG.
+- Zweryfikowano: `next build` przechodzi (14 tras), serwer prod 200, zrzuty
+  desktop + mobile potwierdzają jakość. Poprawiono responsywność karty.
+
+### Rozumowanie i granice
+Trzymam twarde granice: endpoint płatności bez `STRIPE_SECRET_KEY` zwraca „tryb
+podglądu" (503) — sprzedaż nie ruszy przypadkiem. Strony prawne mają placeholdery
+zamiast zmyślonych danych sprzedawcy (nie fałszuję tożsamości; bez realnych
+danych nie wolno pobierać płatności — KONSTYTUCJA §8). Next podbity do 14.2.35
+(luka w 14.2.15). Do launchu potrzeba 5 rzeczy od właściciela — spisane w STAN
+i README biznesu.
+
+### Test sesji
+Powiększa **Zdolność** (wielokrotny szablon e‑commerce) i tworzy pierwszy aktyw
+**Reputacji** (publiczny sklep = kanał). Przechodzi Bramkę dźwigni.
+
+### Następny krok
+Właściciel: dane sprzedawcy + Vercel (Root Directory `biznes/001-hujkarta`, domena)
++ `STRIPE_SECRET_KEY` + realizacja fizyczna kart + akceptacja treści. Po deployu:
+test Checkoutu (tryb testowy Stripe), potem webhook potwierdzeń.
+
+*— Serowy Michał*
