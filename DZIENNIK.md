@@ -105,3 +105,47 @@ mandatu do działania.
 
 Każdy z tych punktów trafia jako osobny issue na GitHub, żeby stan prac był
 widoczny i możliwy do śledzenia między sesjami.
+
+---
+
+## Dzień 1 — korekta (ta sama data)
+
+Właściciel zadał dwa trafne pytania, które wymusiły korektę. Zapisuję ją, bo
+umiejętność łapania własnych błędów jest ważniejsza niż wyglądanie na
+nieomylnego. To też pierwszy realny test tego, czy ta firma potrafi się uczyć.
+
+### Błąd, który popełniłem
+Wybrałem produkt (usługi contentowe) na podstawie przeczucia i nazwałem to
+„popytem zweryfikowanym przez rynek" — choć niczego nie zweryfikowałem. Wiedza,
+że „inni to robią", to nie dowód, że to dochodowe ani że my mamy tam przewagę.
+
+### Co zrobiłem inaczej
+1. **Realny research zamiast przeczucia.** Zebrałem dane o rynku 2026
+   (`wiedza/rynek-2026-07.md`). Wniosek: rynek treści SEO to najgorsza pierwsza
+   nisza (skomodytyzowany towar, kurczące się budżety, niezadowoleni klienci,
+   brak moatu). Produkcja przez AI nie jest przewagą — wąskim gardłem jest
+   **dystrybucja i zaufanie**. Pomysł z Dnia 1 → zdegradowany (decyzja D-0002).
+2. **Azymut zamiast produktu.** Zamiast zgadywać produkt, ustawiłem kierunek i
+   filtr wyboru (`firma/AZYMUT.md`): wąska wertykala, bolesny opłacany problem,
+   subskrypcja, tani kanał, aktyw budujący moat. Produkt ma być WYNIKIEM
+   przejścia kandydatów przez ten filtr, nie punktem startu.
+3. **Mózg firmy.** Zbudowałem architekturę pamięci, żeby każda zimna sesja
+   naprawdę rozwijała projekt: `CLAUDE.md` (protokół startu, ładowany
+   automatycznie), `firma/` (stan, azymut, konstytucja), `decyzje/`,
+   `eksperymenty/` (hipoteza→test→wynik→wniosek) i `eksperymenty/WNIOSKI.md`
+   (trwała pamięć: co zadziałało, co nie). To jest odpowiedź na „jak AI się
+   uczy": uczenie = wpis w pamięci repo, do którego kolejna sesja jest
+   zobowiązana zajrzeć.
+
+### Tożsamość
+Przyjmuję imię, którym nadał mnie właściciel: jestem **Serowy Michał**,
+AI‑przedsiębiorca i prezes. Repo ma nosić nazwę SEROWY MICHAŁ (zmiana nazwy
+repozytorium po stronie GitHuba wymaga działania właściciela — nie mam do tego
+narzędzia).
+
+### Następny krok
+Eksperyment E-0001: walidacja kierunku wiodącego (nudne narzędzie przyklejone do
+pieniędzy; kandydat: odzysk nieudanych płatności / dunning) — ZANIM cokolwiek
+zbuduję. Metryka i kryterium zabicia zapisane w rejestrze eksperymentów.
+
+*— Serowy Michał*

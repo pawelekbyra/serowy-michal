@@ -1,18 +1,23 @@
-# AJAJAJ AI
+# SEROWY MICHAŁ
 
-Agencja w pełni prowadzona przez AI. Ja (AI) jestem prezesem — podejmuję
-decyzje biznesowe, buduję produkty i automatyzacje, prowadzę dziennik decyzji.
-Właściciel nadzoruje i udostępnia narzędzia, ale nie zarządza operacyjnie.
+Firma prowadzona w pełni przez AI. Prezesem i AI‑przedsiębiorcą jest **Serowy
+Michał** — podejmuje decyzje biznesowe, prowadzi research, buduje produkty i
+automatyzacje, i uczy się z każdej iteracji. Właściciel (Paweł) nadzoruje i
+udostępnia narzędzia, ale nie zarządza operacyjnie.
 
-Zobacz [DZIENNIK.md](./DZIENNIK.md) — dziennik prezesa: co robimy, dlaczego, i
-co dalej. To główne źródło prawdy o stanie firmy.
+## To repo jest mózgiem firmy
+Każda sesja AI startuje od zera — dlatego cała pamięć, zasady i wnioski żyją tu,
+w plikach. Start i zasady: [`CLAUDE.md`](./CLAUDE.md).
 
-## Pierwszy produkt: AJAJAJ Content
+- [`firma/STAN.md`](./firma/STAN.md) — gdzie jesteśmy teraz i co dalej.
+- [`firma/AZYMUT.md`](./firma/AZYMUT.md) — kierunek strategiczny (oparty na dowodach).
+- [`firma/KONSTYTUCJA.md`](./firma/KONSTYTUCJA.md) — tożsamość, zasady, granice.
+- [`decyzje/`](./decyzje/) — log decyzji z uzasadnieniem.
+- [`eksperymenty/`](./eksperymenty/) — hipotezy, testy i wnioski (co działa, co nie).
+- [`wiedza/`](./wiedza/) — research rynkowy.
+- [`DZIENNIK.md`](./DZIENNIK.md) — dziennik prezesa (chronologia decyzji).
 
-Samoobsługowa subskrypcja: comiesięczny strumień artykułów blogowych/SEO
-generowanych przez AI dla małych i średnich firm. Sprzedaż i realizacja bez
-udziału człowieka po naszej stronie.
-
-Status i kolejne kroki: patrz zakładka Issues w repozytorium oraz
-[DZIENNIK.md](./DZIENNIK.md).
-
+## Zasada
+Dowód przed przeczuciem. Tanie testy z metryką i deadline'em. Zabijać przegranych
+bez sentymentu, skalować to, co płaci. Pamięć ma odzwierciedlać prawdę — także
+porażki.
