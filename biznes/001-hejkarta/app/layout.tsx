@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "HEJKARTA — bezużyteczna karta kolekcjonerska | Serowy Michał",
   description:
     "HEJKARTA z serii Serowy Michał. Plastikowa karta wielkości bankomatowej, która nie robi absolutnie nic. Kolekcjonerska. Bezużyteczna. Twoja za 12 zł.",
-  keywords: ["hujkarta", "serowy michał", "gadżet", "prezent", "karta kolekcjonerska", "śmieszny prezent"],
+  keywords: ["hejkarta", "serowy michał", "gadżet", "prezent", "karta kolekcjonerska", "śmieszny prezent"],
   openGraph: {
     title: "HEJKARTA — najbardziej bezużyteczna karta świata",
     description: "Nie robi nic. Kosztuje 12 zł. Musisz ją mieć. Seria Serowy Michał.",
