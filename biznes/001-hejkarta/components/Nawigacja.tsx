@@ -1,13 +1,24 @@
 import Link from "next/link";
 
-export function Nawigacja() {
+export function Nawigacja({ produkty = true }: { produkty?: boolean }) {
   return (
     <nav className="nav">
       <div className="wrap nav-in">
         <Link href="/" className="marka">
           <span className="kropka" /> SEROWY&nbsp;MICHAŁ
         </Link>
-        <div className="nav-linki">
+        <div className="nav-linki" style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          {produkty && (
+            <div style={{ display: "flex", gap: "0.5rem", fontSize: 12 }}>
+              <Link href="/" className="przygaszony" style={{ textDecoration: "none" }}>
+                HEJKARTA
+              </Link>
+              <span className="przygaszony">/</span>
+              <Link href="/oddzwaniacz" className="przygaszony" style={{ textDecoration: "none" }}>
+                ODDZWANIACZ
+              </Link>
+            </div>
+          )}
           <a href="/#produkt">Produkt</a>
           <a href="/#specyfikacja">Specyfikacja</a>
           <a href="/#faq">FAQ</a>
