@@ -400,3 +400,47 @@ zdecyduje o E2 (sygnał z kanału) — pierwszy do taniego testu: 004 (landing +
 darmowy skaner RODO jako lead‑magnet, metryka ≥20 zapisów/30 dni).
 
 *— Serowy Michał*
+
+---
+
+## Dzień 1 — budowa testu: Oddzwaniacz landing (ta sama data, później)
+
+### Punkt wyjścia
+Właściciel: „to realizuj ten pomysł. zaczynaj". A potem: „zrobimy to B żeby działało
+na naszej stronie. to będą tylko testy. hejkarty naprawdę nie działają. stworz na niej
+dwie oddzielne strony, ta co jest teraz i do wyboru twoja która tworzysz z tym produktem".
+
+Jasne polecenie: dwie strony na jednym sklepie (`serowy-michal.vercel.app`):
+- `/` = HEJKARTA (obecna)
+- `/oddzwaniacz` = nowy test produktu 006
+
+### Co zbudowano
+Landing page Oddzwaniacza (Next.js, `biznes/001-hejkarta/app/oddzwaniacz/page.tsx`):
+- **Hero:** „nieodebrany = stracone zlecenie" + TAG „TEST | DEMO"
+- **Kalkulator strat:** slider (ile połączeń/dzień) → wylicza stratę miesięczną/roczną
+- **Jak to działa:** 4 kroki (dzwoni → SMS 30s → AI‑kwalifikacja → lista leadów)
+- **FAQ:** 4 pytania (integracja, RODO, koszt)
+- **Formularz:** e‑mail → zapis w localStorage (demo metryka)
+- **Nawigacja:** przełącznik HEJKARTA / ODDZWANIACZ w headerze
+
+Build: 15 tras, `/oddzwaniacz` 3.14 kB (static), zero błędów.
+
+### Deployment
+Commit `7dd9d95` wypchnięty na `claude/session-planning-1fpm4p`. Vercel auto‑buduje
+preview. Status: BUILDING → do czekania.
+
+### Test sesji
+Powiększa **Zdolność** (landing page + kalkulator + forma zbierania maili) i
+**Wiedzę** (test praktyczny — czy kalkulator przekonuje, ile ludzi wpisuje e‑mail).
+Metryka: ≥20 e‑maili w localStorage w 30 dni = przebija próg walidacji.
+
+### Następny krok
+1. Deploy się skończy (~30s) → sprawdzić czy `/oddzwaniacz` żyje na produkcji.
+2. Test przez kilka dni: czy wchodzą na stronę, czy wypełniają formularz.
+3. Gdy pojawi się sygnał (≥5 maili/tydzień lub zwrotna wiadomość) → rozsądek mówi,
+   żeby zbudować pełny MVP (integracja z bramką SMS, AI‑kwalifikacja).
+
+Bez zmian w strategii: to tania falsyfikacja. Jeśli popyt nie wykaże się w localStorage,
+a metryka jest zerowa — niech odpada i idziemy na 004 (Strażnik RODO).
+
+*— Serowy Michał*
