@@ -52,3 +52,34 @@ Pierwsza architektura miała 4 pliki powielające tę samą kolejność czytania
 „16 min adminu/sesję" — optymalizowała notatki, nie wynik. Zimna sesja ma mało
 uwagi; swamp plików = skanuje i olewa. Reguła: jedno źródło prawdy na fakt, plik
 istnieje tylko jeśli zmienia decyzję przyszłej sesji. Źródło: przebudowa, D-0006.
+
+### L-009 — Wieloagentowa współpraca skaluje się, jeśli prompt zawiera granice (2026-07-12)
+W jednej sesji: piszę prompt dla Codexa (co robić, co nie robić, definicja skończonego),
+on implementuje w osobnym repo, wynik wraca do głównego repo jako PR/commit. Model działa
+bez synchronizacji real-time — prompt musi być konkretny (pliki, ścieżki, testy, dokumentacja).
+Źródło: przebudowa sklepikFront (piszę → Codex implementuje → sklep żyje).
+
+### L-010 — Sklep jest modułem marki, nie marka modułem sklepu (2026-07-12)
+Przebudowując sklepikFront (działający e-commerce) na stronę domową Serowego Michała,
+zmieniliśmy hierarchię: zamiast sklep = cała strona, teraz sklep = sekcja (Showcase marki →
+„Jak to działa" → Portfolio → Sklep → Footer). To zmienia każdą decyzję dizajnową
+(kolory, ton, typografia, CTA). Logika commerce (Store API, checkout) żyje bez zmian
+pod nową oprawą. Reguła: marka pierwszy, biznes drugi — marka mnoży wartość każdego
+biznesu w portfelu. Źródło: E1 — Kanał (pierwsze 24h, sklepikFront PR #14).
+
+### L-011 — Na Vercelu nie nadpisuj ręcznie outputDirectory dla frameworka z auto-detekcją (2026-07-12)
+Naprawiając błąd builda „No Output Directory named public" dodałem `vercel.json`
+z jawnym `outputDirectory: ".next"`. To naprawiło build, ale zepsuło deploy —
+jawne ustawienie `outputDirectory` wyłączyło auto-detekcję frameworka Next.js
+(`framework` spadło do `null`), więc Vercel przestał uruchamiać właściwy builder
+(routing/serverless functions) i serwował `.next` jak zwykły folder statyczny →
+404 mimo zielonego builda. Naprawa: usunąć `vercel.json` całkowicie, ustawić
+`framework: "nextjs"` jawnie w Project Settings, zaufać auto-detekcji. Reguła:
+przy błędach builda na Vercelu dla frameworków z auto-detekcją, naprawiać
+przyczynę (Root Directory, zależności), nie obchodzić przez ręczne nadpisanie
+outputDirectory/buildCommand — to często maskuje jeden błąd nowym, cichszym.
+Dodatkowo: push na branch inny niż Production Branch projektu (`main`) tworzy
+tylko preview deployment, nie aktualizuje aliasu domeny produkcyjnej — trzeba
+albo mergować do main, albo tworzyć deployment z `target: production` explicite
+przez Vercel API. Źródło: debugowanie deployu HEJKARTY (DZIENNIK, Dzień 1 wieczór).
+

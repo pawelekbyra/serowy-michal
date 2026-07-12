@@ -18,7 +18,8 @@
 
 ### Do zrobienia (kolejna sesja / właściciel)
 - [ ] Właściciel: dane sprzedawcy do stron prawnych (NIP, adres, e‑mail, zwroty).
-- [ ] Właściciel: podłączyć Vercel (Root Directory `biznes/001-hujkarta`) + domenę.
+- [x] Vercel podłączony (Root Directory `biznes/001-hejkarta`), deploy live na
+      `serowy-michal.vercel.app`. Domena `www.serowymichal.pl` — do podłączenia.
 - [ ] Właściciel: `STRIPE_SECRET_KEY` w env Vercel, gdy ruszamy sprzedaż.
 - [ ] Ustalić realizację fizyczną (druk + wysyłka kart).
 - [ ] Po deployu: sprawdzić realny Checkout w trybie testowym Stripe.

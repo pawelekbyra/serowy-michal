@@ -289,3 +289,158 @@ Właściciel: dane sprzedawcy + Vercel (Root Directory `biznes/001-hujkarta`, do
 test Checkoutu (tryb testowy Stripe), potem webhook potwierdzeń.
 
 *— Serowy Michał*
+
+---
+
+## Dzień 1 — deploy HEJKARTY: 404 mimo zielonego builda (ta sama data, wieczór)
+
+### Punkt wyjścia
+Właściciel przemianował produkt HUJKARTA → **HEJKARTA** (wszystkie odwołania w
+kodzie, treściach i ścieżkach, PR #10). Po przemianowaniu i próbie deployu na
+Vercelu strona zwracała **404 NOT_FOUND** mimo że build kończył się zielono
+(„Build Completed", 14 tras wygenerowanych).
+
+### Diagnoza (kolejne warstwy problemu)
+1. **Warstwa 1 — Root Directory.** Po zmianie ścieżki katalogu na
+   `biznes/001-hejkarta` ustawienie Root Directory w Vercelu dalej wskazywało
+   starą ścieżkę `biznes/001-hujkarta` → build nie widział kodu. Poprawiono w
+   Project Settings.
+2. **Warstwa 2 — mój błąd: `outputDirectory` w vercel.json.** Widząc błąd
+   „No Output Directory named public found", dodałem `vercel.json` z jawnym
+   `outputDirectory: ".next"`. To NAPRAWIŁO build, ale **zepsuło deploy** —
+   jawne ustawienie `outputDirectory` w projekcie Next.js wyłącza auto‑detekcję
+   frameworka (`framework` spadło do `null` w `projectSettings`). Bez wykrytego
+   frameworka Vercel przestaje uruchamiać właściwy builder Next.js (serverless
+   functions, routing) i traktuje `.next` jak zwykły folder statyczny — stąd
+   dalszy 404 mimo zielonego builda i istniejących tras.
+3. **Warstwa 3 — target: preview, nie production.** Nawet gdy build był
+   poprawny, deploy trafiał jako `target: null` (preview), bo Production
+   Branch projektu to `main`, a pracujemy na `claude/session-planning-1fpm4p`.
+   Domena produkcyjna `serowy-michal.vercel.app` nigdy nie dostawała nowego
+   aliasu automatycznie.
+
+### Naprawa
+- Usunięto `vercel.json` całkowicie (i błędny wariant w rocie repo, i w
+  `biznes/001-hejkarta/`) — czysta auto‑detekcja jest właściwym rozwiązaniem
+  dla Next.js na Vercelu, nic nie trzeba nadpisywać ręcznie.
+- Ustawiono `framework: "nextjs"` jawnie w Project Settings przez Vercel API
+  (naprawia auto‑detekcję nawet gdyby coś ją znowu zgubiło).
+- Utworzono nowy deployment z `target: "production"` bezpośrednio przez Vercel
+  API (`POST /v13/deployments` z `gitSource` + `target: production`), plus
+  przypięto alias `serowy-michal.vercel.app` do gotowego, poprawnego builda.
+- Zweryfikowano: `curl https://serowy-michal.vercel.app/` → **HTTP 200**,
+  realny HTML strony (nie 404).
+
+### Rozumowanie
+Klasyczna pułapka: naprawa jednego objawu (błąd o brakującym `public`)
+wprowadziła gorszy, cichszy problem (routing przestał działać, ale build dalej
+wyglądał na zielony). Lekcja ogólna: przy frameworkach z auto‑detekcją (Next.js
+na Vercelu) nie nadpisywać ręcznie `outputDirectory`/`buildCommand`, chyba że
+naprawdę trzeba — auto‑detekcja wie lepiej. Zapisane jako WNIOSKI L-011.
+
+### Test sesji
+Powiększa **Zdolność** (naprawiony, zweryfikowany na produkcji deploy +
+wiedza o pułapce Vercel/Next.js) i **Reputację** (pierwszy publiczny aktyw
+faktycznie działa pod adresem, nie tylko w kodzie).
+
+### Następny krok
+Właściciel śpi (~10h). W tle działa hourly trigger, który będzie kontynuował
+pracę w granicach z `CLAUDE.md` (kod/docs/poprawki, zero publicznych ruchów i
+pieniędzy). Po powrocie właściciela: review + merge PR #14 (sklepikFront) i
+decyzja o blokadach sprzedaży HEJKARTY (STAN.md).
+
+*— Serowy Michał*
+
+---
+
+## Dzień 1 — research: 3 realne kandydatury do portfela (ta sama data, później)
+
+### Punkt wyjścia
+Właściciel zlecił: zrobić dobry research i dopisać do `pomysly/` trzy **realne**
+pomysły. Ryzyko z góry nazwane: to może być busywork (S-1) i „przeczucie zamiast
+popytu" (S-3, L-001). Dlatego twardy wymóg: pkt 2 filtra AZYMUT („ktoś JUŻ
+płaci") musi być **[FAKT] ze źródłem**, nie [ZGADYWANIE].
+
+### Co zbudowano
+Research (6 zapytań webowych, źródła 2026) → 3 kandydatów, każdy jako
+`pomysly/NNN-slug/README.md` z pełnym filtrem AZYMUT i uczciwym werdyktem:
+- **004 — Strażnik RODO** (rekom. #1): baner cookie + auto‑aktualizowane polityki
+  prawne dla stron/sklepów PL. Płacący rynek [FAKT]: CookieYes od ~10 USD/mies,
+  iubenda, Cookiebot; kary do €20 mln/4%, enforcement schodzi na małe firmy.
+- **005 — Opiniomat** (rekom. #2): zbieranie + AI‑odpowiadanie na opinie Google
+  dla lokalnych firm. Popyt [FAKT]: 19–99 USD/mies, opinie ~20% czynnika
+  rankingu map, 82% konsumentów je czyta.
+- **006 — Oddzwaniacz** (rekom. #3): missed‑call text‑back dla fachowców. Ból
+  [FAKT] najbardziej policzalny: 85% dzwoniących nie oddzwania, strata
+  16,8–252 tys. USD/rok; ceny 24,95–500 USD/mies.
+
+### Rozumowanie (dlaczego takie uszeregowanie, nie „3 równe")
+Ranking wg dopasowania do NASZEJ pozycji, nie ogólnej atrakcyjności:
+- 004 wygrywa, bo jako jedyny ma **moat rosnący z czasem** (utrzymywane *polskie*
+  prawo — nie do skopiowania jednym API), **retencję z natury problemu** (prawo
+  się zmienia) i **dogfooding** (mamy już strony prawne w HEJKARCIE → niższy
+  koszt startu).
+- 005 ma najtwardszy popyt, ale rynek gęsty i słabsze dopasowanie kanału.
+- 006 ma najbardziej policzalny ból, ale **realny koszt zmienny** (telefonia/SMS)
+  łamie zaletę „produkcja darmowa" i wprowadza tarcie regulacyjne (prawo
+  telekom + RODO). Stąd #3.
+Wszystkie trzy: **DO-WALIDACJI, wstrzymane do E2** — zgodnie z AZYMUT nie
+waliduję biznesu przed kanałem. To materiał na wybór wertykali, gdy pojawi się
+realny sygnał, nie polecenie „budować teraz".
+
+### Test sesji
+Powiększa **Wiedzę** (3 zwalidowane popytowo kierunki z [FAKT], nie zgadywaniem)
+i **Zdolność** (gotowy portfel kandydatów + kąt dogfoodingu 004). Przechodzi
+Bramkę dźwigni. Nie jest busyworkiem, bo każdy pomysł ma metrykę taniej
+falsyfikacji i wejdzie w grę dopiero przy sygnale z kanału.
+
+### Następny krok
+Bez zmian w priorytecie: kanał (E1) przed walidacją biznesu. Gdy właściciel
+zdecyduje o E2 (sygnał z kanału) — pierwszy do taniego testu: 004 (landing +
+darmowy skaner RODO jako lead‑magnet, metryka ≥20 zapisów/30 dni).
+
+*— Serowy Michał*
+
+---
+
+## Dzień 1 — budowa testu: Oddzwaniacz landing (ta sama data, później)
+
+### Punkt wyjścia
+Właściciel: „to realizuj ten pomysł. zaczynaj". A potem: „zrobimy to B żeby działało
+na naszej stronie. to będą tylko testy. hejkarty naprawdę nie działają. stworz na niej
+dwie oddzielne strony, ta co jest teraz i do wyboru twoja która tworzysz z tym produktem".
+
+Jasne polecenie: dwie strony na jednym sklepie (`serowy-michal.vercel.app`):
+- `/` = HEJKARTA (obecna)
+- `/oddzwaniacz` = nowy test produktu 006
+
+### Co zbudowano
+Landing page Oddzwaniacza (Next.js, `biznes/001-hejkarta/app/oddzwaniacz/page.tsx`):
+- **Hero:** „nieodebrany = stracone zlecenie" + TAG „TEST | DEMO"
+- **Kalkulator strat:** slider (ile połączeń/dzień) → wylicza stratę miesięczną/roczną
+- **Jak to działa:** 4 kroki (dzwoni → SMS 30s → AI‑kwalifikacja → lista leadów)
+- **FAQ:** 4 pytania (integracja, RODO, koszt)
+- **Formularz:** e‑mail → zapis w localStorage (demo metryka)
+- **Nawigacja:** przełącznik HEJKARTA / ODDZWANIACZ w headerze
+
+Build: 15 tras, `/oddzwaniacz` 3.14 kB (static), zero błędów.
+
+### Deployment
+Commit `7dd9d95` wypchnięty na `claude/session-planning-1fpm4p`. Vercel auto‑buduje
+preview. Status: BUILDING → do czekania.
+
+### Test sesji
+Powiększa **Zdolność** (landing page + kalkulator + forma zbierania maili) i
+**Wiedzę** (test praktyczny — czy kalkulator przekonuje, ile ludzi wpisuje e‑mail).
+Metryka: ≥20 e‑maili w localStorage w 30 dni = przebija próg walidacji.
+
+### Następny krok
+1. Deploy się skończy (~30s) → sprawdzić czy `/oddzwaniacz` żyje na produkcji.
+2. Test przez kilka dni: czy wchodzą na stronę, czy wypełniają formularz.
+3. Gdy pojawi się sygnał (≥5 maili/tydzień lub zwrotna wiadomość) → rozsądek mówi,
+   żeby zbudować pełny MVP (integracja z bramką SMS, AI‑kwalifikacja).
+
+Bez zmian w strategii: to tania falsyfikacja. Jeśli popyt nie wykaże się w localStorage,
+a metryka jest zerowa — niech odpada i idziemy na 004 (Strażnik RODO).
+
+*— Serowy Michał*
