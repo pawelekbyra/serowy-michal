@@ -30,7 +30,11 @@ Etapy są bramkowane dowodem, nie datą — patrz `firma/AZYMUT.md`.
   przebudowany na dom marki Serowy Michał przez Codexa): otwarty, mergeable,
   czeka na review i merge właściciela — NIE mergowany autonomicznie (zmiana
   na produkcyjnym, żywym sklepie z realnym checkoutem, poza granicą
-  autonomicznej pracy nocnej).
+  autonomicznej pracy). **Zweryfikowane lokalnie (2026-07-12, wieczór):**
+  `npm run build` ✅, `npm run check` (Biome) ✅, `npm run test` (97/97) ✅.
+  Błąd builda w opisie PR (fetch fonta Google) był problemem środowiska
+  Codexa, nie realnym bugiem — potwierdzone, PR jest technicznie gotowy do
+  merge, brakuje tylko decyzji właściciela.
 - ✅ Przebudowany mózg: `SEROWY-MICHAL.md`, `SLABOSCI.md`, `AZYMUT.md`, `PETLA.md`.
 - ✅ Podpięte narzędzia (GitHub, Vercel, Stripe, Cloudflare, Gmail).
 - Brak przychodu i zasięgu (OCZEKIWANE — sprzedaż celowo wyłączona, zasięg
