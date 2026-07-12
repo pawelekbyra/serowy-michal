@@ -1,5 +1,0 @@
-{
-  "monorepo": true,
-  "buildCommand": "cd biznes/001-hejkarta && npm run build",
-  "outputDirectory": "biznes/001-hejkarta/.next"
-}
