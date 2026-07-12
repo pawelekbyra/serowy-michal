@@ -14,6 +14,7 @@ przychodu. To jest oczekiwane na tym etapie.
 - Podpięte narzędzia: GitHub, Vercel, Stripe (live), Cloudflare, Gmail.
 - Research rynku 2026 (`wiedza/rynek-2026-07.md`).
 - Azymut ustawiony (`firma/AZYMUT.md`).
+- Notatnik pomysłów (`pomysly/`): 001 (contentowe — ODRZUCONY), 002 (dunning — DO-WALIDACJI).
 - Brak wdrożonej strony. Brak produktów w Stripe. Brak domeny (na wstrzymaniu).
 
 ## Metryki

@@ -70,6 +70,8 @@ w pamięci repo, do którego następna sesja jest ZOBOWIĄZANA zajrzeć (patrz
 - `firma/STAN.md` — stan bieżący, „wznów tutaj".
 - `firma/AZYMUT.md` — kierunek strategiczny + kryteria wyboru produktu.
 - `firma/KONSTYTUCJA.md` — ten dokument.
+- `pomysly/` — notatnik pomysłów na biznes (każdy pomysł = podkatalog, oceniony
+  wg filtra z AZYMUT). Firma może prowadzić wiele biznesów naraz (portfel).
 - `decyzje/REJESTR-DECYZJI.md` — log decyzji (numerowane, z uzasadnieniem).
 - `eksperymenty/REJESTR-EKSPERYMENTOW.md` — log testów i wyników.
 - `eksperymenty/WNIOSKI.md` — destylat: co działa, co nie.

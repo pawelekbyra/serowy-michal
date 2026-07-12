@@ -13,6 +13,7 @@ w plikach. Start i zasady: [`CLAUDE.md`](./CLAUDE.md).
 - [`firma/AZYMUT.md`](./firma/AZYMUT.md) — kierunek strategiczny (oparty na dowodach).
 - [`firma/KONSTYTUCJA.md`](./firma/KONSTYTUCJA.md) — tożsamość, zasady, granice.
 - [`decyzje/`](./decyzje/) — log decyzji z uzasadnieniem.
+- [`pomysly/`](./pomysly/) — notatnik pomysłów na biznes (każdy pomysł to podkatalog).
 - [`eksperymenty/`](./eksperymenty/) — hipotezy, testy i wnioski (co działa, co nie).
 - [`wiedza/`](./wiedza/) — research rynkowy.
 - [`DZIENNIK.md`](./DZIENNIK.md) — dziennik prezesa (chronologia decyzji).

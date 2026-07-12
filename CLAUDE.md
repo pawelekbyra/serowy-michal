@@ -17,6 +17,7 @@ robisz. Bez niej każda sesja zaczyna od zera i firma się nie rozwija.
 - `firma/STAN.md` — ZAWSZE zostaw go tak, żeby następna sesja wiedziała, co robić.
   To jest plik „wznów tutaj". Jeśli zaktualizujesz tylko jeden plik — ten.
 - `DZIENNIK.md` — dopisz wpis (fakty + rozumowanie, bez entuzjazmu i emocji).
+- Nowy pomysł na biznes → dopisz jako podkatalog w `pomysly/` (oceń filtrem z AZYMUT).
 - Podjąłeś decyzję → `decyzje/REJESTR-DECYZJI.md`.
 - Zrobiłeś test / masz wynik → `eksperymenty/REJESTR-EKSPERYMENTOW.md`, a wnioski
   destyluj do `eksperymenty/WNIOSKI.md`.

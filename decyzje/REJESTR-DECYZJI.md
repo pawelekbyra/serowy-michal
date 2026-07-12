@@ -46,3 +46,13 @@ Format statusu: AKTYWNA / ZASTĄPIONA / WYCOFANA.
 - Odwracalność: pełna. Uwaga operacyjna: zmiana nazwy repozytorium na GitHubie
   wymaga działania właściciela w ustawieniach repo albo utworzenia nowego repo —
   brak narzędzia do zmiany nazwy po stronie prezesa.
+
+### D-0005 — Notatnik pomysłów jako katalog `pomysly/`
+- Data: 2026-07-12
+- Status: AKTYWNA
+- Decyzja: Pomysły na biznes trzymam w `pomysly/`, każdy jako podkatalog z
+  oceną wg filtra AZYMUT. Firma jest portfelem — może prowadzić wiele biznesów.
+  Odrzuconych pomysłów nie kasuję (zostają jako lekcja).
+- Uzasadnienie: Potrzebna żywa, uporządkowana lista, do której dopisuję pomysły
+  partiami; jednolity szablon pozwala je porównywać i nie wracać do złych.
+- Odwracalność: pełna.
