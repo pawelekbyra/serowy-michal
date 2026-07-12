@@ -52,3 +52,18 @@ Pierwsza architektura miała 4 pliki powielające tę samą kolejność czytania
 „16 min adminu/sesję" — optymalizowała notatki, nie wynik. Zimna sesja ma mało
 uwagi; swamp plików = skanuje i olewa. Reguła: jedno źródło prawdy na fakt, plik
 istnieje tylko jeśli zmienia decyzję przyszłej sesji. Źródło: przebudowa, D-0006.
+
+### L-009 — Wieloagentowa współpraca skaluje się, jeśli prompt zawiera granice (2026-07-12)
+W jednej sesji: piszę prompt dla Codexa (co robić, co nie robić, definicja skończonego),
+on implementuje w osobnym repo, wynik wraca do głównego repo jako PR/commit. Model działa
+bez synchronizacji real-time — prompt musi być konkretny (pliki, ścieżki, testy, dokumentacja).
+Źródło: przebudowa sklepikFront (piszę → Codex implementuje → sklep żyje).
+
+### L-010 — Sklep jest modułem marki, nie marka modułem sklepu (2026-07-12)
+Przebudowując sklepikFront (działający e-commerce) na stronę domową Serowego Michała,
+zmieniliśmy hierarchię: zamiast sklep = cała strona, teraz sklep = sekcja (Showcase marki →
+„Jak to działa" → Portfolio → Sklep → Footer). To zmienia każdą decyzję dizajnową
+(kolory, ton, typografia, CTA). Logika commerce (Store API, checkout) żyje bez zmian
+pod nową oprawą. Reguła: marka pierwszy, biznes drugi — marka mnoży wartość każdego
+biznesu w portfelu. Źródło: E1 — Kanał (pierwsze 24h, sklepikFront PR #14).
+
