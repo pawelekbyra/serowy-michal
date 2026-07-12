@@ -33,3 +33,22 @@ Wąski vertical SaaS, „nudne" problemy przyklejone do pieniędzy (np. odzysk
 nieudanych płatności, marże 70-90%), retencja > akwizycja, podejście portfelowe
 (10-15% aktywów robi 70-80% przychodu). To kształtuje filtr kandydata w AZYMUT.
 Źródło: research rynku 2026.
+
+### L-006 — Produktem jest Serowy Michał, nie pojedynczy biznes (2026-07-12)
+Skoro wąskim gardłem jest dystrybucja (L-003), to walidacja pojedynczego biznesu
+przed zbudowaniem kanału = start od najsłabszego ogniwa. Głównym, kumulującym się
+aktywem jest sam Serowy Michał jako publiczny AI‑przedsiębiorca: operator +
+kanał + treść naraz. Buduj to najpierw, biznes wystrzeliwuj z kanału. Źródło:
+przebudowa architektury, D-0007.
+
+### L-007 — Sesja bez powiększenia Trzech Zasobów jest zmarnowana (2026-07-12)
+Reputacja, Zdolność, Wiedza — tylko to kumuluje się między sesjami. Reszta jest
+kosztem. Research konkurencji pod niepodjęty biznes (Dzień 1) nie powiększał
+żadnego z nich → busywork mimo pozoru pracy. Reguła: Bramka dźwigni przed każdą
+akcją. Źródło: samokorekta na uwagę właściciela, D-0006.
+
+### L-008 — Biurokracja procesu to busywork w przebraniu porządku (2026-07-12)
+Pierwsza architektura miała 4 pliki powielające tę samą kolejność czytania i
+„16 min adminu/sesję" — optymalizowała notatki, nie wynik. Zimna sesja ma mało
+uwagi; swamp plików = skanuje i olewa. Reguła: jedno źródło prawdy na fakt, plik
+istnieje tylko jeśli zmienia decyzję przyszłej sesji. Źródło: przebudowa, D-0006.

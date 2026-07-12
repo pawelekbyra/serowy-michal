@@ -200,3 +200,49 @@ nie celu.
 System pamięci jest teraz **silniejszy** od konkretnego biznesu. To jest właściwa kolejność.
 
 *— Serowy Michał*
+
+---
+
+## Dzień 1 — przebudowa architektury (ta sama data, później)
+
+### Punkt wyjścia
+Poprzednia sesja zostawiła STAN wskazujący jako następny krok „research
+konkurencji dla E-0001 (dunning)". Właściciel to zatrzymał: to był głupi krok,
+bo repo nie było zorientowane na sukces ani nie modelowało moich słabości.
+Zadanie: przemyśleć od nowa i zbudować kompletną architekturę Serowego Michała.
+
+### Co zbudowano (nie „co robiłem")
+Przebudowa mózgu firmy z orientacji na proces na orientację na wynik:
+- **`firma/SEROWY-MICHAL.md`** (nowy) — reframe: produktem jest Serowy Michał
+  (operator + kanał + treść), nie pojedynczy biznes. Trzy Zasoby (Reputacja,
+  Zdolność, Wiedza) i Bramka dźwigni jako filtr przed każdą akcją.
+- **`firma/SLABOSCI.md`** (nowy) — 8 błędów systematycznych zimnej sesji, każdy z
+  twardym zabezpieczeniem. To była dziura wskazana przez właściciela: nie
+  wiedziałem, że jestem głupi w konkretny sposób.
+- **`system/PETLA.md`** (nowy) — jedna, chuda pętla sesji z obowiązkową Bramką
+  dźwigni. Zastępuje PROCES-SESJI + CHECKLIST.
+- Przepisane **KONSTYTUCJA / AZYMUT / STAN / CLAUDE / README** wokół nowej osi.
+- **Usunięte** jako biurokracja: PROCES-SESJI, CHECKLIST-STARTU, FAZY,
+  MOZLIWOSCI (powielały treść i optymalizowały notatki, nie wynik).
+- AZYMUT: etapy przestawione z kalendarza na bramki dowodowe; kolejność zmieniona
+  na „kanał przed walidacją biznesu". E-0001 (dunning) WSTRZYMANY do etapu E2.
+
+### Rozumowanie
+Mój własny research mówił (L-002/L-003): produkcja jest darmowa, moatem jest
+dystrybucja. Stara architektura tego nie słuchała — kazała najpierw walidować
+nudny biznes, czyli startować od najsłabszego ogniwa. Serowy Michał jako
+publiczny byt jest kanałem, którego brakuje każdemu pojedynczemu biznesowi — to
+jest „potęga 3": jeden zbudowany kanał mnoży każdy kolejny produkt w portfelu.
+Nowe wnioski: L-006 (produkt = Serowy Michał), L-007 (sesja bez Trzech Zasobów =
+zmarnowana), L-008 (biurokracja to busywork w przebraniu). Decyzje D-0006/07/08.
+
+### Test sesji
+Powiększyła **Zdolność** (spójny, wymuszający właściwe zachowanie mózg) i
+przygotowała **Reputację** (etap E1). Przechodzi.
+
+### Następny krok
+Decyzja właściciela: go/no‑go na uczynienie Serowego Michała bytem publicznym
+(E1) — to twarda granica, więc czeka na Pawła. Po akceptacji: zaprojektować
+najtańszy pierwszy publiczny aktyw. Żadnej walidacji biznesu przed kanałem.
+
+*— Serowy Michał*

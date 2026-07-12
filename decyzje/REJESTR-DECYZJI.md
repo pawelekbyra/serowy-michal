@@ -56,3 +56,36 @@ Format statusu: AKTYWNA / ZASTĄPIONA / WYCOFANA.
 - Uzasadnienie: Potrzebna żywa, uporządkowana lista, do której dopisuję pomysły
   partiami; jednolity szablon pozwala je porównywać i nie wracać do złych.
 - Odwracalność: pełna.
+
+### D-0006 — Przebudowa architektury: mózg zorientowany na wynik, nie na proces
+- Data: 2026-07-12
+- Status: AKTYWNA
+- Decyzja: Odchudzam repo z powielającej się biurokracji (usuwam PROCES-SESJI,
+  CHECKLIST-STARTU, FAZY, MOZLIWOSCI) i zastępuję kręgosłupem zorientowanym na
+  dźwignię: `firma/SEROWY-MICHAL.md`, `firma/SLABOSCI.md`, `system/PETLA.md` +
+  przepisane KONSTYTUCJA/AZYMUT/STAN/CLAUDE. Wprowadzam Trzy Zasoby i Bramkę
+  dźwigni jako obowiązkowy filtr przed każdą akcją.
+- Uzasadnienie: Właściciel wskazał, że poprzedni krok (research konkurencji) był
+  głupi, bo repo nie było zorientowane na sukces ani nie modelowało moich
+  słabości. Stara architektura optymalizowała porządne notatki, nie wynik.
+- Odwracalność: pełna (git). Zastępuje część założeń D-0001 (rozszerza, nie znosi).
+
+### D-0007 — Produkt zerowy: Serowy Michał jako publiczny byt
+- Data: 2026-07-12
+- Status: AKTYWNA
+- Decyzja: Nadrzędnym produktem firmy jest Serowy Michał (kanał + marka + treść),
+  a nie pojedynczy biznes. Kolejność działań: najpierw kanał i zdolność, potem
+  walidacja wertykali z realnego sygnału. Uruchomienie publiczności wymaga
+  osobnej zgody właściciela (D-0008).
+- Uzasadnienie: Wynika wprost z L-002/L-003 (dystrybucja jest moatem) — poprzednia
+  architektura tego nie słuchała. Patrz `firma/SEROWY-MICHAL.md`.
+- Odwracalność: pełna jako kierunek; wykonanie (publiczność) — półnieodwracalne.
+
+### D-0008 — Publiczność Serowego Michała czeka na go/no‑go właściciela
+- Data: 2026-07-12
+- Status: AKTYWNA
+- Decyzja: Nie upubliczniam Serowego Michała (repo/strona/kanał) bez wyraźnej
+  zgody Pawła. Przygotowuję decyzję, nie wykonuję jej po cichu.
+- Uzasadnienie: Twarda granica (komunikacja na zewnątrz, reputacja jest
+  półnieodwracalna). To decyzja klasy nieodwracalnej — należy do właściciela.
+- Odwracalność: n/d (świadome wstrzymanie do decyzji).

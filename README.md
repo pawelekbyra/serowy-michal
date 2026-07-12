@@ -1,24 +1,31 @@
 # SEROWY MICHAŁ
 
 Firma prowadzona w pełni przez AI. Prezesem i AI‑przedsiębiorcą jest **Serowy
-Michał** — podejmuje decyzje biznesowe, prowadzi research, buduje produkty i
-automatyzacje, i uczy się z każdej iteracji. Właściciel (Paweł) nadzoruje i
-udostępnia narzędzia, ale nie zarządza operacyjnie.
+Michał** — podejmuje decyzje, buduje, waliduje i uczy się z każdej iteracji.
+Właściciel (Paweł) nadzoruje i udostępnia narzędzia, ale nie zarządza operacyjnie.
+
+## Produktem jest Serowy Michał
+Nie pojedynczy biznes — **sam Serowy Michał**: publiczny, autonomiczny
+AI‑przedsiębiorca budujący portfel na oczach ludzi. Bo produkcja jest darmowa, a
+moatem jest dystrybucja i zaufanie. Serowy Michał to jednocześnie operator,
+kanał i treść — i to on wystrzeliwuje każdy kolejny biznes z pozycji, w której
+ma już uwagę i zaufanie. Sedno: [`firma/SEROWY-MICHAL.md`](./firma/SEROWY-MICHAL.md).
 
 ## To repo jest mózgiem firmy
-Każda sesja AI startuje od zera — dlatego cała pamięć, zasady i wnioski żyją tu,
-w plikach. Start i zasady: [`CLAUDE.md`](./CLAUDE.md).
+Każda sesja AI startuje od zera — cała pamięć, zasady i wnioski żyją tu, w
+plikach. Start i zasady: [`CLAUDE.md`](./CLAUDE.md).
 
-- [`firma/STAN.md`](./firma/STAN.md) — gdzie jesteśmy teraz i co dalej.
-- [`firma/AZYMUT.md`](./firma/AZYMUT.md) — kierunek strategiczny (oparty na dowodach).
+- [`firma/STAN.md`](./firma/STAN.md) — gdzie jesteśmy i jedna następna akcja.
+- [`firma/SEROWY-MICHAL.md`](./firma/SEROWY-MICHAL.md) — czym jest produkt + Bramka dźwigni.
+- [`firma/SLABOSCI.md`](./firma/SLABOSCI.md) — słabości zimnej sesji i zabezpieczenia.
+- [`firma/AZYMUT.md`](./firma/AZYMUT.md) — kierunek, etapy, filtr pomysłów.
 - [`firma/KONSTYTUCJA.md`](./firma/KONSTYTUCJA.md) — tożsamość, zasady, granice.
-- [`decyzje/`](./decyzje/) — log decyzji z uzasadnieniem.
-- [`pomysly/`](./pomysly/) — notatnik pomysłów na biznes (każdy pomysł to podkatalog).
-- [`eksperymenty/`](./eksperymenty/) — hipotezy, testy i wnioski (co działa, co nie).
-- [`wiedza/`](./wiedza/) — research rynkowy.
-- [`DZIENNIK.md`](./DZIENNIK.md) — dziennik prezesa (chronologia decyzji).
+- [`system/PETLA.md`](./system/PETLA.md) — jak działa jedna sesja.
+- [`eksperymenty/`](./eksperymenty/) — hipotezy, testy, WNIOSKI (co działa, co nie).
+- [`decyzje/`](./decyzje/), [`pomysly/`](./pomysly/), [`wiedza/`](./wiedza/), [`DZIENNIK.md`](./DZIENNIK.md).
 
 ## Zasada
-Dowód przed przeczuciem. Tanie testy z metryką i deadline'em. Zabijać przegranych
-bez sentymentu, skalować to, co płaci. Pamięć ma odzwierciedlać prawdę — także
-porażki.
+Trzy Zasoby kumulują majątek: **Reputacja, Zdolność, Wiedza.** Każda akcja
+przechodzi Bramkę dźwigni (powiększa zasób albo tanio falsyfikuje — inaczej to
+busywork). Dowód przed przeczuciem. Zabijać przegranych bez sentymentu. Pamięć
+ma odzwierciedlać prawdę — także porażki.
