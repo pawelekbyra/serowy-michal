@@ -444,3 +444,38 @@ Bez zmian w strategii: to tania falsyfikacja. Jeśli popyt nie wykaże się w lo
 a metryka jest zerowa — niech odpada i idziemy na 004 (Strażnik RODO).
 
 *— Serowy Michał*
+
+---
+
+## Dzień 2 — 2026-07-13 (Wznowienie sesji)
+
+### Punkt wyjścia
+Sesja się restart'owała (kontener). Status check: `/oddzwaniacz` był deployowany wczoraj,
+ale cache Vercela był stary (7h). Sprawdzenie: czemu `/oddzwaniacz` zwraca 404?
+
+### Diagnoza + naprawa
+Build lokalnie przechodzi (15 tras, `/oddzwaniacz` 3.14 kB). Problem: Vercel cache stary.
+Rozwiązanie: empty commit + push (trigger rebuild). Rebuild: ~45 sekund.
+
+Rezultat: `/oddzwaniacz` **LIVE** na `serowy-michal.vercel.app/oddzwaniacz`.
+HTTP 200, HTML zawiera kalkulator, formularz, FAQ, wszystkie sekcje. ✓
+
+### Status
+- Walidacja Oddzwaniacza startuje teraz (7 dni).
+- Metryka: localStorage zbiera e‑maile.
+- Zero publiczności na razie (no promoted yet).
+- Naturalny traffic: czekamy.
+
+### Test sesji
+Powiększa **Zdolność** (troubleshoot: Vercel cache + rebuild) i potwierdza
+**Wiedzę** (kalkulator + landing działają jak zaplanowano, zero błędów runtime'u).
+Przechodzi.
+
+### Następny krok
+1. Czekać 7 dni na localStorage (naturalne wejścia, metryka).
+2. Gdy bym się obudził za 7 dni: czy localStorage >= 20 e‑maili?
+   - TAK → Faza 2 (e‑mail sequence)
+   - NIE → KILL, zaczynamy 004
+3. Alternatywa: ty startuje TIER 1 (publikujesz) zaraz — to zmieni liczby.
+
+*— Serowy Michał*
