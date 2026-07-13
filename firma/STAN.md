@@ -3,8 +3,9 @@
 Czytam na początku sesji, aktualizuję na końcu. Ma odpowiadać na jedno pytanie:
 **jaka jest jedna następna najlepsza akcja?**
 
-Ostatnia aktualizacja: 2026-07-13 (Dzień 2 — Oddzwaniacz (006) LIVE na `/oddzwaniacz`,
-walidacja popytu trwa 7 dni).
+Ostatnia aktualizacja: 2026-07-13 (Dzień 2 — refaktor mózgu: pętla ucząca się
+[Księga zakładów + Bramka rozliczenia + warstwy + Licznik], D-0010. Oddzwaniacz
+(006) LIVE, walidacja jako zakład Z-0001, deadline 2026-07-20).
 
 ## Etap
 **E1 — Kanał (w toku).** Właściciel wyznaczył pierwszy produkt (HEJKARTA), który
@@ -12,6 +13,7 @@ jest jednocześnie publicznym debiutem Serowego Michała. E0 (mózg) domknięte.
 Etapy są bramkowane dowodem, nie datą — patrz `firma/AZYMUT.md`.
 
 ## Tablica Trzech Zasobów (jedyny majątek, który się liczy)
+> Liczby (źródło prawdy, append-only): `firma/LICZNIK.md`. Poniżej opis jakościowy.
 - **REPUTACJA:** wciąż 0 zewnętrznego zasięgu (nic nie opublikowane publicznie),
   ale pierwszy publiczny aktyw **żyje pod adresem** `serowy-michal.vercel.app`
   (HTTP 200, zweryfikowane). Drugi front (sklepikFront → dom marki Serowy
@@ -35,7 +37,11 @@ Etapy są bramkowane dowodem, nie datą — patrz `firma/AZYMUT.md`.
   Błąd builda w opisie PR (fetch fonta Google) był problemem środowiska
   Codexa, nie realnym bugiem — potwierdzone, PR jest technicznie gotowy do
   merge, brakuje tylko decyzji właściciela.
-- ✅ Przebudowany mózg: `SEROWY-MICHAL.md`, `SLABOSCI.md`, `AZYMUT.md`, `PETLA.md`.
+- ✅ **Mózg v3 — pętla ucząca się** (D-0010): `system/KSIEGA.md` (zakłady +
+  Bramka rozliczenia), `firma/LICZNIK.md` (zasoby w liczbach), warstwy pamięci
+  w `CLAUDE.md` + GŁOWA w `WNIOSKI.md`. Różnica: repo teraz nie tylko pamięta,
+  ale **rozlicza** swoje predykcje (obrona przed S-3/S-4/S-5).
+- ✅ Przebudowany mózg (v2): `SEROWY-MICHAL.md`, `SLABOSCI.md`, `AZYMUT.md`, `PETLA.md`.
 - ✅ Podpięte narzędzia (GitHub, Vercel, Stripe, Cloudflare, Gmail).
 - ✅ **Portfel kandydatów do E2** (research 2026, popyt = [FAKT] ze źródłem):
   004 Strażnik RODO (rekom. #1 — moat rośnie, dogfooding), 005 Opiniomat
@@ -60,13 +66,13 @@ Etapy są bramkowane dowodem, nie datą — patrz `firma/AZYMUT.md`.
 
 ## Następna najlepsza akcja (Dzień 2)
 
-**Walidacja Oddzwaniacza (7 dni):**
+**Walidacja Oddzwaniacza — zakład Z-0001 (`system/KSIEGA.md`, deadline 2026-07-20):**
 - Landing live: `/oddzwaniacz` żyje, kalkulator + formularz działają.
-- Oczekiwanie na sygnał: ile naturalnego traffic bez publiczności?
-- Metryka break-even: ≥20 e‑maili w localStorage za 7 dni → Faza 2 (e‑mail sequence).
-- Jeśli < 5 e‑maili za 7 dni → KILL, pivot na 004 (Strażnik RODO).
-- Decyzja twoja: czy teraz startować TIER 1 rozpromowania (ty publikujesz na LinkedIn/Twitter)?
-  czy czekać na naturalny traffic?
+- Metryka: ≥20 e‑maili w localStorage za 7 dni → Faza 2. < 5 → KILL, pivot na 004.
+- **Bramka rozliczenia 2026-07-20:** odczytać localStorage, wpisać wynik i werdykt
+  do Z-0001, z pudła wyciągnąć wniosek. (Uzbrojenie: patrz „Trigger follow-up".)
+- Decyzja twoja: startować TIER 1 rozpromowania (Ty publikujesz) czy czekać na
+  naturalny traffic? (limit AI — bez zgody nie buduję publiczności).
 
 **Dla HEJKARTY:**
 - Właściciel: review + merge PR #14 (sklepikFront) i decyzja o 4 blokadach sprzedaży.
@@ -77,6 +83,8 @@ Etapy są bramkowane dowodem, nie datą — patrz `firma/AZYMUT.md`.
 
 ## Zaktualizuj na koniec sesji
 - [ ] `firma/STAN.md` — etap, tablica Zasobów, jedna następna akcja.
+- [ ] `system/KSIEGA.md` — nowy zakład (akcja z metryką+deadline) / rozliczenia.
+- [ ] `firma/LICZNIK.md` — dopisz wiersz, jeśli zmieniła się liczba zasobu.
 - [ ] `DZIENNIK.md` — wpis (co ZBUDOWANO, rozumowanie, następny krok).
 - [ ] Warunkowo: WNIOSKI / REJESTR-DECYZJI / REJESTR-EKSPERYMENTOW / pomysly.
-- [ ] Test sesji: czy powiększyła ≥1 z Trzech Zasobów?
+- [ ] Test sesji: czy powiększyła ≥1 z Trzech Zasobów? (sprawdź w LICZNIK)

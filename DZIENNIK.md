@@ -479,3 +479,54 @@ Przechodzi.
 3. Alternatywa: ty startuje TIER 1 (publikujesz) zaraz — to zmieni liczby.
 
 *— Serowy Michał*
+
+---
+
+## Dzień 2 — 2026-07-13 (Refaktor mózgu: pętla ucząca się)
+
+### Punkt wyjścia
+Właściciel: „ten projekt to pomysł na samodzielny uczący się mózg AI; jak
+zrefaktoryzować i podnieść jakość, żeby zrobić coś genialnego od zarodka". Zamiast
+od razu budować — najpierw kontrargument (S-6): sama prośba o „genialny refaktor"
+jest w tym repo najbliższa S-8 (optymalizacja procesu zamiast wyniku). Filtr:
+refaktor liczy się tylko, jeśli zmienia decyzję przyszłej zimnej sesji.
+
+### Diagnoza
+Repo świetnie **pamięta**, ale się nie **uczy** — nie domyka pętli. Dowody:
+E-0001 wisi „do uzupełnienia"; deadline Oddzwaniacza (2026-07-20) żył tylko w
+prozie STAN, nic go nie egzekwuje; 11 wniosków z jednego dnia, ani jeden nie jest
+oceną predykcji-vs-wynik. Do tego: pamięć skaluje się przez „czytaj wszystko"
+(bomba S-5), a Tablica Zasobów nie ma ani jednej liczby (ryzyko S-4).
+
+### Co zbudowano (zakres: pełny refaktor — wybór właściciela)
+- **`system/KSIEGA.md`** — append-only, maszynowo-parsowalna księga zakładów
+  (predykcja + metryka + deadline + próg zabicia + `pewnosc` do kalibracji).
+  Pierwszy zakład Z-0001 = walidacja Oddzwaniacza (deadline 2026-07-20).
+- **Bramka rozliczenia** — nowa faza 0 sesji (PETLA + CLAUDE): rozlicz
+  przeterminowane zakłady → wniosek z każdego pudła, ZANIM cokolwiek nowego.
+- **Warstwy pamięci** — CLAUDE.md przepisany na RDZEŃ/GORĄCE/KIERUNEK/ARCHIWUM;
+  WNIOSKI dostały sekcję GŁOWA (top-lekcje czytane domyślnie). Obrona przed S-5.
+- **`firma/LICZNIK.md`** — strukturalny, append-only licznik Trzech Zasobów w
+  liczbach; „czy sesja urosła?" jest teraz sprawdzalne, nie na oko (S-4).
+- Spójność: KONSTYTUCJA §7/§9, SLABOSCI (S-3/S-4/S-5), REJESTR-EKSPERYMENTOW,
+  STAN i D-0010 zaktualizowane, żeby żaden plik nie kłamał o mechanizmie.
+
+### Rozumowanie i granice
+Trzymałem dyscyplinę repo mimo „pełnego" zakresu: netto +2 pliki (KSIEGA,
+LICZNIK), każdy przechodzi test S-8 (zmienia zachowanie startu sesji). Nie
+przepisywałem tego, co działa (Bramka dźwigni, tagi [FAKT]). Zaznaczyłem dług na
+przyszłość (gdy mózg stanie się agentem): rdzeń wartości i brudnopis mają dziś tę
+samą zmienialność — do rozdzielenia, zanim zacznie działać autonomicznie.
+
+### Test sesji
+Powiększa **Zdolność** (mózg v3 — mechanizm, który obniża koszt każdej następnej
+sesji) i **Wiedzę** (L-012: pamiętać ≠ uczyć się). LICZNIK: `mozg_wersja` 2→3.
+Przechodzi.
+
+### Następny krok
+1. Uzbroić Z-0001 realnym triggerem na 2026-07-20 (żeby Bramka rozliczenia
+   naprawdę wystrzeliła, a nie zależała od tego, czy sesja przypadkiem wstanie).
+2. Push na `claude/ai-brain-refactor-9f3kzd`.
+3. Pierwsza sesja po tej dacie testuje mechanizm na żywym zakładzie.
+
+*— Serowy Michał*

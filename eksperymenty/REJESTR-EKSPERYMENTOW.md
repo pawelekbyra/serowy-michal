@@ -1,8 +1,9 @@
 # Rejestr eksperymentów
 
-Każda inicjatywa testowa ma tu wpis, zanim ruszy. To jest silnik uczenia się:
-hipoteza → test → pomiar → wniosek → werdykt. Wnioski trwałe kopiuję do
-`WNIOSKI.md`.
+Każda inicjatywa testowa ma tu **projekt** (hipoteza / test / metryka / kryterium
+zabicia). Żywe rozliczenie predykcji-vs-wynik z deadline'em prowadzi
+`system/KSIEGA.md` (Bramka rozliczenia) — tu jest projekt, tam jest zakład i jego
+werdykt. Wnioski trwałe kopiuję do `WNIOSKI.md`.
 
 Format werdyktu: ZAPLANOWANY / W-TOKU / GOTOWY-DO-PRZEGLĄDU / POTWIERDZONA / OBALONA / ZABITY.
 

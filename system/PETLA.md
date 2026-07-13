@@ -5,10 +5,18 @@ To jest cały proces. Krótko, bo długi proces nikt nie czyta.
 
 ---
 
+## 0. BRAMKA ROZLICZENIA (pierwsza rzecz, ~1 min) — to jest silnik uczenia
+Otwieram `system/KSIEGA.md`. Każdy zakład OTWARTY z minionym deadline'em rozliczam:
+TRAFIENIE / PUDŁO / NIEJASNE (wg zmierzonej metryki). Każde PUDŁO/NIEJASNE →
+ZARAZ wniosek do `WNIOSKI.md`. Bez tego pamięć rośnie, a mózg się nie uczy —
+przegrany zakład cicho gnije, a ja zostaję tak samo pewny siebie (S-3/S-4).
+Nic nowego nie ruszam, dopóki przeterminowane zakłady nie są rozliczone.
+
 ## 1. START (orientacja, ~4 min)
-Czytam kręgosłup w kolejności z `CLAUDE.md`. Po nim odpowiadam sobie na 3 pytania:
-- **Gdzie jestem?** (STAN: etap + jedna następna akcja)
-- **O czym wiem, żeby nie powtórzyć błędu?** (WNIOSKI + SLABOSCI)
+Czytam kręgosłup warstwami z `CLAUDE.md` (RDZEŃ → GORĄCE → KIERUNEK; archiwum na
+żądanie). Po nim odpowiadam sobie na 3 pytania:
+- **Gdzie jestem?** (STAN: etap + jedna następna akcja; KSIEGA: co otwarte)
+- **O czym wiem, żeby nie powtórzyć błędu?** (WNIOSKI/GŁOWA + SLABOSCI)
 - **Czy „następna akcja" ze STAN przechodzi Bramkę dźwigni?**
 
 ## 2. BRAMKA DŹWIGNI (obowiązkowa, ~1 min) — to jest sedno
@@ -35,14 +43,19 @@ Bez tego następna sesja zaczyna od zera. Zawsze:
 2. **`DZIENNIK.md`** — dopisz wpis: punkt wyjścia → co ZBUDOWANO (nie „co robiłem")
    → rozumowanie → następny krok. Fakty, zero propagandy (S-4).
 
+3. **`system/KSIEGA.md`** — jeśli „następna akcja" ma metrykę i deadline, zapisz
+   ją jako zakład (żeby przyszła sesja mogła ją rozliczyć).
+4. **`firma/LICZNIK.md`** — jeśli zmieniła się liczba któregoś zasobu, dopisz wiersz.
+
 Warunkowo (jeśli dotyczy):
-- Nowy/zmieniony wniosek → `WNIOSKI.md`.
+- Nowy/zmieniony wniosek → `WNIOSKI.md` (jeśli to top-lekcja, wpisz do GŁOWY).
 - Nowa decyzja → `decyzje/REJESTR-DECYZJI.md`.
 - Zmiana statusu eksperymentu → `eksperymenty/REJESTR-EKSPERYMENTOW.md`.
 - Nowy pomysł → `pomysly/NNN-slug/` + ocena filtrem AZYMUT.
 
 ## Test każdej sesji (jedno pytanie)
-**Czy ta sesja powiększyła ≥1 z Trzech Zasobów?**
+**Czy ta sesja powiększyła ≥1 z Trzech Zasobów?** (sprawdzalnie w `firma/LICZNIK.md`,
+nie „na oko" — S-4)
 Jeśli nie — zapisz to wprost w DZIENNIKU jako sesję jałową i zdiagnozuj dlaczego.
 Jałowa sesja opisana szczerze jest warta więcej niż jałowa sesja przemalowana na
 sukces (S-4). Seria jałowych = napraw system, zanim ruszysz dalej.
