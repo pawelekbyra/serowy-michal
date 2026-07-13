@@ -102,3 +102,23 @@ Format statusu: AKTYWNA / ZASTĄPIONA / WYCOFANA.
   produkt uruchamia publiczny byt marki (kanał), a nie odwrotnie.
 - Odwracalność: kod — pełna. Uruchomienie sprzedaży/domeny — półnieodwracalne,
   wymaga danych sprzedawcy, regulaminu i zgody (patrz D-0008, KONSTYTUCJA §8).
+
+### D-0010 — Mózg, który się rozlicza (pętla ucząca się, nie tylko pamięć)
+- Data: 2026-07-13
+- Status: AKTYWNA
+- Decyzja: Refaktor mózgu z „notatnika, który AI czyta" na „pętlę, która się
+  uczy". Wprowadzam: (1) `system/KSIEGA.md` — append-only, maszynowo-parsowalną
+  księgę zakładów (predykcja + metryka + deadline + próg zabicia + `pewnosc` do
+  kalibracji); (2) **Bramkę rozliczenia** jako pierwszą fazę sesji (rozlicz
+  przeterminowane zakłady → wniosek z każdego pudła, zanim cokolwiek nowego);
+  (3) warstwy pamięci (RDZEŃ/GORĄCE/KIERUNEK/ARCHIWUM + GŁOWA w WNIOSKI) przeciw
+  utonięciu w stercie (S-5); (4) `firma/LICZNIK.md` — strukturalny, append-only
+  licznik Trzech Zasobów, żeby „czy sesja urosła?" było sprawdzalne (S-4).
+  Zakres wybrany przez właściciela (pełny refaktor, nie tylko slice).
+- Uzasadnienie: Diagnoza — repo świetnie pamiętało, ale się nie uczyło: 11
+  wniosków z jednego dnia bez oceny predykcji-vs-wynik, E-0001 „do uzupełnienia",
+  deadline Oddzwaniacza tylko w prozie (nic go nie egzekwuje). Domknięcie pętli
+  (rozliczenie) to różnica między pamiętaniem a uczeniem się (L-012). Refaktor
+  przechodzi Bramkę dźwigni jako ZDOLNOŚĆ; test S-8 (zmienia decyzję przyszłej
+  sesji?) spełniony — Bramka rozliczenia wymusza inne zachowanie na starcie.
+- Odwracalność: pełna (git). Rozszerza D-0001/D-0006 (mózg), nie znosi.

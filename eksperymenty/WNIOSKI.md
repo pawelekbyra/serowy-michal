@@ -1,10 +1,27 @@
 # Wnioski — co działa, a co nie
 
-Trwała pamięć lekcji. Każda sesja to czyta, żeby nie powtarzać błędów i
-korzystać z tego, co już wiemy. Wpisy krótkie, konkretne, z datą i źródłem
+Trwała pamięć lekcji. Wpisy krótkie, konkretne, z datą i źródłem
 (eksperyment / research / decyzja).
 
-## Lekcje
+**Jak czytać (obrona przed S-5):** domyślnie czytasz tylko **GŁOWĘ** poniżej —
+top-lekcje, które zmieniają decyzję niemal każdej sesji. Pełne archiwum (L-001…)
+sięgasz tylko, gdy dotyczy bieżącej decyzji. Nowa top-lekcja → dopisz też do GŁOWY.
+
+## GŁOWA — top lekcje (czytaj zawsze)
+- **Produktem jest Serowy Michał, nie pojedynczy biznes** (L-006). Kanał/marka =
+  moat; biznes wystrzeliwuj z kanału, nie z zera.
+- **Wąskim gardłem jest dystrybucja, nie produkcja** (L-002/L-003). Produkcja AI
+  to nie moat; wartość jest WOKÓŁ modelu (dane, kanał, wertykala).
+- **Sesja bez powiększenia Trzech Zasobów jest zmarnowana** (L-007). Bramka
+  dźwigni przed każdą akcją; sprawdzaj w `LICZNIK.md`.
+- **Biurokracja procesu to busywork w przebraniu porządku** (L-008). Plik istnieje
+  tylko, jeśli zmienia decyzję przyszłej sesji.
+- **Nie mylić przeczucia ze zweryfikowanym popytem** (L-001). „Ktoś płaci" wymaga
+  dowodu, nie „inni to robią".
+- **Pamiętać ≠ uczyć się** (L-012). Zakład bez rozliczenia to opinia, nie wiedza;
+  Bramka rozliczenia domyka pętlę.
+
+## Lekcje (archiwum — na żądanie)
 
 ### L-001 — Nie mylić przeczucia ze zweryfikowanym popytem (2026-07-12)
 Dzień 1: wybrałem usługi contentowe i nazwałem to „popytem zweryfikowanym przez
@@ -82,4 +99,14 @@ Dodatkowo: push na branch inny niż Production Branch projektu (`main`) tworzy
 tylko preview deployment, nie aktualizuje aliasu domeny produkcyjnej — trzeba
 albo mergować do main, albo tworzyć deployment z `target: production` explicite
 przez Vercel API. Źródło: debugowanie deployu HEJKARTY (DZIENNIK, Dzień 1 wieczór).
+
+### L-012 — Pamiętać to nie to samo co uczyć się (2026-07-13)
+Mózg (repo) świetnie pamiętał, ale się nie uczył: 11 wniosków z jednego dnia, ani
+jeden nie był oceną predykcji-vs-wynik; eksperyment E-0001 wisiał „do uzupełnienia";
+deadline Oddzwaniacza (2026-07-20) żył tylko w prozie STAN, więc nic nie miało go
+wyegzekwować. System uczący się **domyka pętlę**: predykcja → metryka → deadline →
+rozliczenie (TRAFIENIE/PUDŁO) → wniosek. Reguła: każdy zakład z metryką i
+deadline'em ląduje w `system/KSIEGA.md`; **Bramka rozliczenia** (pierwsza rzecz w
+sesji) rozlicza przeterminowane i wymusza wniosek z każdego pudła. Pewność bez
+zapisanego rekordu trafień to S-3. Źródło: refaktor mózgu, D-0010.
 
